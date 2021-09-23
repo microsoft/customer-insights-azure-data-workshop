@@ -23,12 +23,12 @@
     "defaultDataLakeStorageFilesystemName": "defaultfs",
     "computeSubnetId": "",
     "storageBlobDataContributorRoleID": "ba92f5b4-2d11-453d-a403-e96b0029c9fe",
-	"contributorRoleID": "b24988ac-6180-42a0-ab88-20f7382dd24c",
+    "contributorRoleID": "b24988ac-6180-42a0-ab88-20f7382dd24c",
     "defaultDataLakeStorageAccountUrl": "[concat('https://', variables('adlsStorageAccountName'), '.dfs.core.windows.net')]",
     "keyVaultName": "[concat('asakeyvault', parameters('uniqueSuffix'))]",
     "blobStorageAccountName": "[concat('asastore', parameters('uniqueSuffix'))]",
     "applicationInsightsName": "[concat('asaappinsights', parameters('uniqueSuffix'))]",
-    "amlWorkspaceName": "[concat('amlworkspace', parameters('uniqueSuffix'))]"   
+    "amlWorkspaceName": "[concat('amlworkspace', parameters('uniqueSuffix'))]"
   },
   "resources": [
     {
@@ -204,7 +204,7 @@
         "roleDefinitionId": "[resourceId('Microsoft.Authorization/roleDefinitions', variables('storageBlobDataContributorRoleID'))]",
         "principalId": "[reference(concat('Microsoft.Synapse/workspaces/', variables('workspaceName')), '2019-06-01-preview', 'Full').identity.principalId]",
         "principalType": "ServicePrincipal",
-		"scope": "[resourceGroup().id]"
+        "scope": "[resourceGroup().id]"
       }
     },
     {
@@ -214,7 +214,7 @@
       "location": "[variables('location')]",
       "dependsOn": [
         "[concat('Microsoft.Synapse/workspaces/', variables('workspaceName'))]",
-		"[resourceId('Microsoft.MachineLearningServices/workspaces', variables('amlWorkspaceName'))]"
+        "[resourceId('Microsoft.MachineLearningServices/workspaces', variables('amlWorkspaceName'))]"
       ],
       "properties": {
         "roleDefinitionId": "[resourceId('Microsoft.Authorization/roleDefinitions', variables('contributorRoleID'))]",
