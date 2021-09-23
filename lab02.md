@@ -109,7 +109,7 @@ this deployment for you.
 Press the **Deploy to Azure** button below which will prompt you to
 enter several parameters before deploying Azure resources:
 
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FArtisConsulting%2Fcustomer-insights-azure-data-workshop%2Fmain%2FAzureSetup%2FArmTemplate.json" target="_blank"><img src="images/lab02/media/image7.png" style="width:1.67708in;height:0.35417in" /></a>
+[<img src="images/lab02/media/image7.png" style="width:1.67708in;height:0.35417in" />](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FArtisConsulting%2Fcustomer-insights-azure-data-workshop%2Fmain%2FAzureSetup%2FArmTemplate.json){:target="_blank" rel="noopener"}
 
 
 On the Custom deployment form fill in the choose the right Azure
