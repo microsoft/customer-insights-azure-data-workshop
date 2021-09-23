@@ -290,3 +290,5 @@ In this lab, you imported the results of your machine learning model
 back into Customer Insights and merged this information into the
 Customer entity. Now you are able to take action from Customer Insights
 on customers who are predicted to churn.
+
+Next, go to [Lab 6](lab06.md).

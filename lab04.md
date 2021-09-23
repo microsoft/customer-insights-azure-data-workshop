@@ -453,3 +453,5 @@ models, evaluated the accuracy of the models, and sent the output of
 those models to Blob Storage to be accessed by other Microsoft
 resources. Classification tasks can easily be performed with Azure ML
 using Two-Class Boosted Decision Trees or Two-Class Decision Forests.
+
+Next, go to [Lab 5](lab05.md).

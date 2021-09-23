@@ -318,3 +318,5 @@ In this lab, you exported data from Customer Insights to Azure Synapse
 Analytics, queried it in a Synapse Serverless SQL pool, enriched it with
 an additional dataset and created a view which can be presented to Azure
 Machine Learning.
+
+Next, go to [Lab 4](lab04.md).

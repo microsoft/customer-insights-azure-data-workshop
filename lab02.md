@@ -106,7 +106,7 @@ this deployment for you.
 
 <img src="images/lab02/media/image6.png" style="width:6.02167in;height:2.29199in" alt="Graphical user interface, application Description automatically generated" />
 
-Press the **Deploy to Azure** button below which will prompt you to
+CTRL+click (on Windows) or CMD+click (on MacOS) the **Deploy to Azure** button below which will prompt you to
 enter several parameters before deploying Azure resources:
 
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FArtisConsulting%2Fcustomer-insights-azure-data-workshop%2Fmain%2FAzureSetup%2FArmTemplate.json" target="_blank"><img src="images/lab02/media/image7.png" style="width:1.67708in;height:0.35417in" /></a>
@@ -258,3 +258,5 @@ in them will be deleted and unrecoverable.
 In this lab, you learned how to create an Azure resource group,
 provision Azure resources with an Azure Resource Manager template, and
 grant access to those resources.
+
+Next, go to [Lab 3](lab03.md).

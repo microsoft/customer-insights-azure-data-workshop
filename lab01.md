@@ -341,3 +341,5 @@ Then click Run:
 In this lab, you loaded, mapped, merged and enriched customer entities
 in Dynamics 365 Customer Insights. Later labs build on this work using
 key Azure data services to add value to your customer data.
+
+Next, go to [Lab 2](lab02.md).
