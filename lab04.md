@@ -1,8 +1,8 @@
 # Lab 4 - Predicting Customer Churn in Azure Machine Learning
 
-# <img src="images/lab04/media/image1.png" style="width:3.9375in;height:0.63819in" />
-
-# <img src="images/lab04/media/image2.png" style="width:3.48973in;height:1.20479in" alt="Microsoft partner logo" />
+<img src="images/lab04/media/image1.png" style="width:3.9375in;height:0.63819in" />
+<br/>
+<img src="images/lab04/media/image2.png" style="width:3.48973in;height:1.20479in" alt="Microsoft partner logo" />
 
 # Contents
 
@@ -447,8 +447,8 @@ storage for the next labs.
 
 # Summary
 
-In this lab, you signed into Azure Machine Learning Studio, create a
-datastore connect to a SQL database, prepared the data, trained two
+In this lab, you signed into Azure Machine Learning Studio, created a
+datastore connected to a SQL database, prepared the data, trained two
 models, evaluated the accuracy of the models, and sent the output of
 those models to Blob Storage to be accessed by other Microsoft
 resources. Classification tasks can easily be performed with Azure ML

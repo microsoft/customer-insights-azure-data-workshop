@@ -1,8 +1,8 @@
 # Lab 2 - Deploying Azure Services
 
-# <img src="images/lab02/media/image1.png" style="width:3.9375in;height:0.63819in" />
-
-# <img src="images/lab02/media/image2.png" style="width:3.48973in;height:1.20479in" alt="Text Description automatically generated with medium confidence" />
+<img src="images/lab02/media/image1.png" style="width:3.9375in;height:0.63819in" />
+<br/>
+<img src="images/lab02/media/image2.png" style="width:3.48973in;height:1.20479in" />
 
 #  
 
@@ -82,7 +82,7 @@ press the **Enter** key.
     page.
 
     On the **Create a resource group** screen, select your desired
-    Subscription and Region. For Resource group,
+    Subscription and Region. Be sure to choose a [region which supports](https://azure.microsoft.com/en-us/global-infrastructure/services/?products=synapse-analytics,machine-learning-service,storage) Azure Synapse Analytics workspaces, Azure Data Lake Storage, and Azure Machine Learning. For Resource group,
     enter **customer-insights-workshop-rg**, then select the **Review +
     Create** button.
 
@@ -100,7 +100,7 @@ Go to the Access control (IAM) left nav of the resource group you
 created in the previous step. Click the “View my access” button. Ensure
 that you are assigned the Owner role for this resource group (or the
 Owner role is inherited from the subscription or management group). If
-you are not Owner, then ask your Azure administrator to make you an
+you are not an Owner, then ask your Azure administrator to make you an
 Owner on this resource group. Or ask your Azure administrator to perform
 this deployment for you.
 

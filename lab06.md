@@ -1,8 +1,8 @@
 # Lab 6 – Automating with Synapse Pipelines
 
-# <img src="images/lab06/media/image1.png" style="width:3.9375in;height:0.63819in" />
-
-# <img src="images/lab06/media/image2.png" style="width:3.48973in;height:1.20479in" alt="Text Description automatically generated with medium confidence" />
+<img src="images/lab06/media/image1.png" style="width:3.9375in;height:0.63819in" />
+<br/>
+<img src="images/lab06/media/image2.png" style="width:3.48973in;height:1.20479in" />
 
 #  
 
@@ -140,7 +140,7 @@ description:
 
 <img src="images/lab06/media/image11.png" style="width:3.03167in;height:2.36491in" alt="Graphical user interface, text, application Description automatically generated" />
 
-In the Activities pane search for “data flow” and drag the data the
+In the Activities pane search for “data flow” and drag the
 **Data flow** module onto the canvas.
 
 <img src="images/lab06/media/image12.png" style="width:7.31352in;height:2.48993in" alt="Graphical user interface, application Description automatically generated" />
@@ -330,11 +330,11 @@ the bottom:
 # Exercise 2: Automate the rerun of your machine learning pipeline
 
 In this section you will automate the execution of your machine learning
-pipeline. There are several was to automate and operationalize your
+pipeline. There are several ways to automate and operationalize your
 model. One option is to publish a batch inference pipeline which reuses
-a trained model to make more predictions (inferences). Another option is
+a trained model to make more predictions (inferences). A second option is
 to automate the execution of the entire pipeline which retrains models
-and scores the dataset with each execution. We will go automate this
+and scores the dataset with each execution. We will use this
 second option in this lab.
 
 ## Step 1: Setup a Synapse pipeline which runs your machine learning pipeline

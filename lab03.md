@@ -1,8 +1,8 @@
 # Lab 3 - Customer Insights Integration with Azure Synapse Analytics
 
-# <img src="images/lab03/media/image1.png" style="width:3.9375in;height:0.63819in" />
-
-# <img src="images/lab03/media/image2.png" style="width:3.48973in;height:1.20479in" alt="Text Description automatically generated with medium confidence" />
+<img src="images/lab03/media/image1.png" style="width:3.9375in;height:0.63819in" />
+<br/>
+<img src="images/lab03/media/image2.png" style="width:3.48973in;height:1.20479in" />
 
 #  
 
@@ -21,7 +21,7 @@ Insights](#exercise-1-export-data-from-customer-insights)
 
 - [Step 1: Add a connection to Synapse](#step-1-add-a-connection-to-synapse)
 
-- [Step 2: Export entities to Synapse](#_Toc83203689)
+- [Step 2: Export entities to Synapse](#step-2-export-entities-to-synapse)
 
 - [Step 3: View data in Synapse Serverless using Synapse Studio](#step-3-view-data-in-synapse-serverless-using-synapse-studio)
 
@@ -35,7 +35,7 @@ Insights](#exercise-1-export-data-from-customer-insights)
 
 ## Introduction
 
-This hands on lab will an overview of exporting data from Dynamics 365
+This hands on lab will be an overview of exporting data from Dynamics 365
 Customer Insights to Azure Synapse Analytics. You will then use Synapse
 Serverless SQL to enrich the customer datasets with additional
 information.
@@ -84,14 +84,14 @@ Lake Store (ADLS) account. Azure Synapse Analytics exports to your ADLS
 account and also creates a view called an “external table” in a Azure
 Synapse Analytics Serverless SQL Pool to query the data.
 
-<img src="images/lab03/media/image5.png" style="width:5.91749in;height:3.2192in" alt="Graphical user interface, application Description automatically generated" />
+<img src="images/lab03/media/image5.png" style="width:5.91749in;height:3.2192in"  />
 
 On the “Set up Azure Synapse Analytics connection” pane, type in a name
 for this connection, choose the Azure subscription, Synapse workspace
 (asaworkspace\<suffix>), Storage account (asadatalake\<suffix>), and
 Container (staging).
 
-<img src="images/lab03/media/image6.png" style="width:5.89666in;height:7.11558in" alt="Graphical user interface, text, application, email Description automatically generated" />
+<img src="images/lab03/media/image6.png" style="width:5.89666in;height:7.11558in"  />
 
 Scroll down to the bottom of the pane and check the “I agree” checkbox.
 Then click Save. Note, if you don’t see the Save button in blue, check
@@ -101,7 +101,7 @@ Microsoft-provided demo environment like the “Retail Sales” demo
 environment. Also check you have appropriate permissions in Customer
 Insights.
 
-<img src="images/lab03/media/image7.png" style="width:6.13627in;height:2.96916in" alt="Text Description automatically generated" />
+<img src="images/lab03/media/image7.png" style="width:6.13627in;height:2.96916in"  />
 
 ## Step 2: Export entities to Synapse
 
@@ -110,9 +110,9 @@ connection you just setup, name your export “SynapseExport”, name your
 Synapse Serverless SQL database name “CustomerInsightsExport”. Select
 the Customer entity to export. Then click Save.
 
-<img src="images/lab03/media/image8.png" style="width:5.81331in;height:4.78192in" alt="Graphical user interface, text, application, email Description automatically generated" />
+<img src="images/lab03/media/image8.png" style="width:5.81331in;height:4.78192in"  />
 
-<img src="images/lab03/media/image9.png" style="width:5.92791in;height:8.29282in" alt="Graphical user interface, text, application Description automatically generated" />
+<img src="images/lab03/media/image9.png" style="width:5.92791in;height:8.29282in"  />
 
 Then press the “Run all” button at the top of the Exports screen:
 

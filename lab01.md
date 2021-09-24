@@ -1,8 +1,8 @@
 # Lab 1 - Customer Insights Data Sources, Unification and Enrichment
 
-# <img src="images/lab01/media/image1.png" style="width:3.9375in;height:0.63819in" />
-
-# <img src="images/lab01/media/image2.png" style="width:3.48973in;height:1.20479in" alt="Text Description automatically generated with medium confidence" />
+<img src="images/lab01/media/image1.png" style="width:3.9375in;height:0.63819in" />
+<br/>
+<img src="images/lab01/media/image2.png" style="width:3.48973in;height:1.20479in" />
 
 #  
 
@@ -216,7 +216,7 @@ On the Data… Unify left nav, click “+ Select entities” on the Map tab:
 
 <img src="images/lab01/media/image23.png" style="width:7.5in;height:3.47361in" alt="Graphical user interface, application, Teams Description automatically generated" />
 
-Click the checkboxes next to the two entities you with to map then click
+Click the checkboxes next to the two entities you wish to map then click
 Apply:
 
 <img src="images/lab01/media/image24.png" style="width:3.46923in;height:4.83401in" alt="Graphical user interface, text, application Description automatically generated" />
@@ -272,8 +272,8 @@ record counts:
 
 ## Step 3: Merge your customer entities
 
-On the Merge tab, if you need to combine any fields, ignore or rename
-any fields do that. For the sample dataset, nothing needs to be done
+On the Merge tab, you have the opportunity to combine, ignore or rename
+any fields. For the sample dataset, nothing needs to be done
 except click **Save** and click **Run… Run only Merge**.
 
 <img src="images/lab01/media/image34.png" style="width:7.5in;height:3.57222in" alt="Graphical user interface, text, application Description automatically generated" />

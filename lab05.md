@@ -1,8 +1,8 @@
 # Lab 5 - Import Machine Learning Predictions into Customer Insights
 
-# <img src="images/lab05/media/image1.png" style="width:3.9375in;height:0.63819in" />
-
-# <img src="images/lab05/media/image2.png" style="width:3.48973in;height:1.20479in" alt="Text Description automatically generated with medium confidence" />
+<img src="images/lab05/media/image1.png" style="width:3.9375in;height:0.63819in" />
+<br/>
+<img src="images/lab05/media/image2.png" style="width:3.48973in;height:1.20479in" />
 
 #  
 
@@ -68,7 +68,7 @@ button:
 Click the Copy to clipboard button on the right side of the Key textbox
 under the key1 section:
 
-<img src="images/lab05/media/image5.png" style="width:6.67802in;height:1.65648in" alt="Text Description automatically generated with medium confidence" />
+<img src="images/lab05/media/image5.png" style="width:6.67802in;height:1.65648in" />
 
 ## Step 2: Import Machine Learning Output to Customer Insights
 
