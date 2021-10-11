@@ -226,7 +226,7 @@
       "type": "Microsoft.Insights/components",
       "apiVersion": "2018-05-01-preview",
       "name": "[variables('applicationInsightsName')]",
-      "location": "[if(or(equals(variables('location'),'eastus2'),equals(variables('location'),'westcentralus')),'southcentralus',variables('location'))]",
+      "location": "[variables('location')]",
       "kind": "web",
       "properties": {
         "Application_Type": "web"
