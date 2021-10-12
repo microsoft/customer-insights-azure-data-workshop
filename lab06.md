@@ -209,12 +209,12 @@ flow is executed under the covers on highly scalable Spark compute.
 
     <img src="images/lab06/media/image24.png" style="width:1.86484in;height:0.30213in" />
 
-1.  Click the Import schema button now. Accepting the default formats is
-    adequate for our file:
+1.  Click the Import schema button (which was grayed out in step 13) now. Accepting the default formats is
+    adequate for our file. Click the Import button at the bottom to accept the defaults:
 
     <img src="images/lab06/media/image25.png" style="width:6.40714in;height:5.01112in" alt="Table Description automatically generated" />
 
-1.  Now the schema for this CustomerChargesDetail source is populated.
+1.  Wait a few seconds for the schema to be loaded. Now the schema for this CustomerChargesDetail source is populated.
 
     <img src="images/lab06/media/image26.png" style="width:7.5in;height:2.86389in" alt="Graphical user interface, application Description automatically generated" />
 

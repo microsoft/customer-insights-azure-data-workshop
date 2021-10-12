@@ -80,7 +80,7 @@ learning models into Customer Insights.
 
     <img src="images/lab05/media/image6.png" style="width:7.5in;height:3.025in" alt="Graphical user interface, text, application, email Description automatically generated" />
 
-1.  Choose Import data and give it the name “AzureMlResults” and click Next.
+1.  Choose Import data (_Note: the UI has been renamed to "Microsoft Power Query" in the latest release_) and give it the name “AzureMlResults” and click Next.
 
     <img src="images/lab05/media/image7.png" style="width:7.5in;height:5.04792in" alt="Graphical user interface, text, application, email Description automatically generated" />
 

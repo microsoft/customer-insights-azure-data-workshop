@@ -197,10 +197,7 @@ designing the experiment.
 6.  In the Advanced Settings, you will see your selections from the
     prior screen at the top. Name the compute **CustomerChurnCC**. Set
     the Minimum number of nodes at 0 and Maximum at 2. Set the Idle
-    seconds before scale down to 60. Click Create when complete.
-    **Important: This will be mentioned later on as well, but we need to
-    make sure and scale down our clusters when we’re done to avoid
-    incurring charges.**
+    seconds before scale down to 60. Click Create when complete and wait a few minutes.
 
     <img src="images/lab04/media/image22.png" style="width:6.14467in;height:2.1375in" alt="Graphical user interface, text, application Description automatically generated" />
 
@@ -239,12 +236,16 @@ designing the experiment.
 11. Next, we know that TotalCharges has a few blank values (we could
     have tested this via using the Summarize Data asset and evaluating
     each column distribution but for the sake of this lab we’re going to
-    move on to handling them). Drag **Clean Missing Data** onto the page
+    move on to handling them). Search for **Clean Missing Data**:
+
+    <img src="images/lab04/media/imageCleanMissingDataSearch.png"/>
+
+    Drag **Clean Missing Data** onto the page
     and connect TelcoChurn to the new asset.
 
     <img src="images/lab04/media/image27.png" style="width:2.70438in;height:1.87083in" alt="A picture containing chart Description automatically generated" />
 
-12. In the properties pane for Clean Missing Data. Select TotalCharges
+12. In the properties pane for Clean Missing Data. Click "Edit column" and select TotalCharges
     as the Column and set the parameters below. *Note: If the goal of
     the lab was to build the best model we would have run some form of
     regression or sub-sample from the complete rows to find a predicted
@@ -290,7 +291,7 @@ designing the experiment.
 15. The right node of the Split Data asset is connected to another
     instance of **Select Columns in Dataset**. This extracts the
     Customer ID’s of the testing data. We are going to join this back in
-    to the results dataset after the models have run.
+    to the results dataset after the models have run. _Note that the description "Extract customer ID to join back in later" can be added in the Comment section of the properties pane of that module. This is optional._
 
     <img src="images/lab04/media/image33.png" style="width:3.04853in;height:1.57265in" alt="Diagram Description automatically generated" /><img src="images/lab04/media/image34.png" style="width:3.46568in;height:1.52663in" />
 
@@ -314,6 +315,8 @@ designing the experiment.
     <img src="images/lab04/media/image39.png" style="width:6.59064in;height:3.11505in" />
 
 ## Step 4: Training models
+
+_Note: If you get confused on how modules should be connected, feel free to skip down to a zoomed-out screenshot in Step 5.7 below._
 
 Now that we’ve setup the design of our experiment, we can begin to train
 the models and evaluate the outputs.

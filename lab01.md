@@ -102,7 +102,7 @@ and wish take advantage of a trial environment, visit
 
     <img src="images/lab01/media/image3.png" style="width:7.5in;height:4.46597in" alt="Graphical user interface, application, Teams Description automatically generated" />
 
-1.  Choose “Import data” and enter a dataset name “CustomerDemographics” and click Next.
+1.  Choose “Import data” (_Note: the UI has been renamed to "Microsoft Power Query" in the latest release_) and enter a dataset name “CustomerDemographics” and click Next.
 
     <img src="images/lab01/media/image4.png" style="width:7.5in;height:4.73333in" alt="Graphical user interface, text, application, email Description automatically generated" />
 
@@ -137,7 +137,7 @@ and wish take advantage of a trial environment, visit
 
     <img src="images/lab01/media/image10.png" style="width:7.5in;height:3.9875in" alt="Graphical user interface, application, table Description automatically generated" />
 
-1.  Choose to refresh manually (since this is a static sample dataset that
+1.  Choose "refresh manually" (since this is a static sample dataset that
     won’t change) and click Save.
 
     <img src="images/lab01/media/image11.png" style="width:7.5in;height:4.53125in" alt="Graphical user interface, text, application Description automatically generated" />
@@ -149,7 +149,7 @@ and wish take advantage of a trial environment, visit
 
 ## Step 3: Load CustomerServiceAttributes sample dataset to Customer Insights
 
-1.  Click “Add data source”, Import data, and name it
+1.  Click “Add data source”, Import data (_Note: the UI has been renamed to "Microsoft Power Query" in the latest release_), and name it
     CustomerServiceAttributes and click Next:
 
     <img src="images/lab01/media/image13.png" style="width:7.5in;height:4.67986in" alt="Graphical user interface, text, application, email Description automatically generated" />
