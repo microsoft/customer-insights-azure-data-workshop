@@ -108,7 +108,7 @@ data.
     Datastore type. The server name will be
     “**asaworkspace\<suffix>-ondemand**”. The Database name is “CI”.
     Select the proper Subscription ID and Resource Group assigned to
-    your project. The User ID will be “**asa.sql.admin**”. Enter the
+    your project “**customer-insights-workshop-rg**”. The User ID will be “**asa.sql.admin**”. Enter the
     password you created in lab 2. Select “No” on using the workspace
     managed identity for data preview. Once done, click “**Create**” at
     the bottom. *Note: Even though the documented connection string for
@@ -268,12 +268,24 @@ designing the experiment.
 14. From the Split Data asset, we are going to connect the left node
     (training) to 1 new asset and the right node (testing) to 3 new
     assets. The left node is connected to **Select Columns in Dataset**
-    (drag over from the module options). In the Select Columns options,
-    remove CustomerID from data. If we were to leave the ID in, the
+    (drag over from the module options). Click "Edit column" to launch the Select columns dialog. In the Select columns options click the "By name" radio button and click "Add all":
+
+    <img src="images/lab04/media/imageSelectAll.png" />
+
+    Remove the customerID column by clicking the minus sign next to it. If we were to leave the ID in, the
     models would treat that as a feature which would cause errors down
     the line.
 
+    <img src="images/lab04/media/imageRemoveCustomerID.png" />
+
+    Your screen should look like this. Click Save.
+
+    <img src="images/lab04/media/imageSelectColumns.png" />
+
+    The selected columns should then be listed here:
+
     <img src="images/lab04/media/image31.png" style="width:3.11667in;height:1.72958in" alt="Diagram Description automatically generated" /><img src="images/lab04/media/image32.png" style="width:3.57729in;height:1.70347in" alt="Graphical user interface, text, application Description automatically generated" />
+
 
 15. The right node of the Split Data asset is connected to another
     instance of **Select Columns in Dataset**. This extracts the
