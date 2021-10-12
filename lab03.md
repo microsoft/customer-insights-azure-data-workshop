@@ -93,6 +93,8 @@ query those datasets.
     (asaworkspace\<suffix>), Storage account (asadatalake\<suffix>), and
     Container (staging).
 
+    _Note: Your user must be an Owner on the customer-insights-workshop-rg resource group for the following to work. If you are not sure you have Owner permissions, go back to Lab 2 [Step 2: Deploy the ARM template](lab02.md#step-2-deploy-the-arm-template) and work through the #1 item to "View my access". RBAC permissions changes can take up to **15 minutes** to propogate._
+
     <img src="images/lab03/media/image6.png" style="width:5.89666in;height:7.11558in"  />
 
 1.  Scroll down to the bottom of the pane and check the “I agree” checkbox.
@@ -106,8 +108,6 @@ query those datasets.
     <img src="images/lab03/media/image7.png" style="width:6.13627in;height:2.96916in"  />
 
 ## Step 2: Export entities to Synapse
-
-_Note: Your user must be an Owner on the customer-insights-workshop-rg resource group for the following to work. If you are not sure you have Owner permissions, go back to Lab 2 [Step 2: Deploy the ARM template](lab02.md#step-2-deploy-the-arm-template) and work through the #1 item to "View my access". RBAC permissions changes can take up to **15 minutes** to propogate._
 
 1.  On the “Set up Azure Synapse Analytics export” pane, choose the
     connection you just setup, name your export “SynapseExport”, name your
@@ -277,7 +277,7 @@ _Note: Your user must be an Owner on the customer-insights-workshop-rg resource 
 
     <img src="images/lab03/media/image23.png" style="width:7.5in;height:6.52778in" alt="Graphical user interface, text, application, email Description automatically generated" />
 
-    Now let’s create a new view which joins the Customer data exported from
+1.  Now let’s create a new view which joins the Customer data exported from
     Customer Insights with the CustomerChurnCharges view. Copy and paste
     this query into the SQL script 1 window, make sure the “Use database”
     dropdown says “CI” still, and click Run:
