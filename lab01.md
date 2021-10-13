@@ -102,9 +102,9 @@ and wish take advantage of a trial environment, visit
 
     <img src="images/lab01/media/image3.png" style="width:7.5in;height:4.46597in" alt="Graphical user interface, application, Teams Description automatically generated" />
 
-1.  Choose “Import data” (_Note: the UI has been renamed to "Microsoft Power Query" in the latest release_) and enter a dataset name “CustomerDemographics” and click Next.
+1.  Choose “Microsoft Power Query” and enter a dataset name “CustomerDemographics” and click Next.
 
-    <img src="images/lab01/media/image4.png" style="width:7.5in;height:4.73333in" alt="Graphical user interface, text, application, email Description automatically generated" />
+    <img src="images/lab01/media/image4.png"/>
 
 1.  Search for “Web” and choose “Web API” which is a quick way to import a
     dataset from a public website. (Your actual business data could come
@@ -149,10 +149,10 @@ and wish take advantage of a trial environment, visit
 
 ## Step 3: Load CustomerServiceAttributes sample dataset to Customer Insights
 
-1.  Click “Add data source”, Import data (_Note: the UI has been renamed to "Microsoft Power Query" in the latest release_), and name it
+1.  Click “Add data source”, "Microsoft Power Query", and name it
     CustomerServiceAttributes and click Next:
 
-    <img src="images/lab01/media/image13.png" style="width:7.5in;height:4.67986in" alt="Graphical user interface, text, application, email Description automatically generated" />
+    <img src="images/lab01/media/image13.png"  />
 
 1.  Choose Web API like on the previous data source and then paste in the
     following URL:
