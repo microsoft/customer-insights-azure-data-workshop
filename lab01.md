@@ -101,11 +101,11 @@ and wish take advantage of a trial environment, visit
 
     ![](images/lab01/media/image3.png)
 
-1.  Choose “Microsoft Power Query” and enter a dataset name “CustomerDemographics” and click Next.
+1.  Choose “Microsoft Power Query” and enter a dataset name **CustomerDemographics** and click Next.
 
-    ![](images/lab01/media/image4.png)
+    ![](images/lab01/media/lab1-01.png)
 
-1.  Search for “Web” and choose “Web API” which is a quick way to import a
+1.  Search for **Web** and choose **Web API** which is a quick way to import a
     dataset from a public website. (Your actual business data could come
     from any other type of data source which Power Query Online supports.)
 
@@ -117,12 +117,12 @@ and wish take advantage of a trial environment, visit
 
     ![](images/lab01/media/image6.png)
     
-1.  Choose “Transform data”
+1.  Choose **Transform data**.
 
    ![](images/lab01/media/image7.png)
 
 1.  Click the Transform tab at the top of the Power Query screen and then
-    click “Use first row as headers”
+    click **Use first row as headers**
 
     ![](images/lab01/media/image8.png)
 
@@ -131,12 +131,12 @@ and wish take advantage of a trial environment, visit
 
     ![](images/lab01/media/image9.png)
     
-1.  Change the query name to CustomerDemographics. Click the Next button at
+1.  Change the query name to **CustomerDemographics**. Click the **Next** button at
     the bottom of the screen.
 
     ![](images/lab01/media/image10.png)
 
-1.  Choose "refresh manually" (since this is a static sample dataset that
+1.  Choose **refresh manually** (since this is a static sample dataset that
     won’t change) and click Save.
 
     ![](images/lab01/media/image11.png)
@@ -149,7 +149,7 @@ and wish take advantage of a trial environment, visit
 ## Step 3: Load CustomerServiceAttributes sample dataset to Customer Insights
 
 1.  Click “Add data source”, "Microsoft Power Query", and name it
-    CustomerServiceAttributes and click Next:
+    **CustomerServiceAttributes** and click **Next**:
 
     ![](images/lab01/media/image13.png)
 
@@ -164,12 +164,12 @@ and wish take advantage of a trial environment, visit
    ![](images/lab01/media/image14.png)
 
 
-1.  Click “Transform data”:
+1.  Click **Transform data**:
 
     ![](images/lab01/media/image15.png)
 
 
-1.  On the Transform tab click “User first row as headers”:
+1.  On the Transform tab click **User first row as headers**:
 
     ![](images/lab01/media/image16.png)
 
@@ -179,7 +179,7 @@ and wish take advantage of a trial environment, visit
     ![](images/lab01/media/image17.png)
 
 1.  Left click on the ABC icon next to the tenure column header and choose
-    “Whole number” to convert this column to an integer data type.
+    **Whole number** to convert this column to an integer data type.
 
     ![](images/lab01/media/image18.png)
 
@@ -188,7 +188,7 @@ and wish take advantage of a trial environment, visit
 
     ![](images/lab01/media/image19.png)
 
-1.  Choose to refresh manually and click Save.
+1.  Choose to refresh manually and click **Save**.
 
     ![](images/lab01/media/image20.png)
 
@@ -201,7 +201,7 @@ and wish take advantage of a trial environment, visit
     ![](images/lab01/media/image21.png)
 
 1.  On the Data tab for each entity, ensure that rows have been loaded and
-    are visible. If no rows are shown, go back to the “Data sources” left
+    are visible. If no rows are shown, go back to the **Data sources** left
     nav and refresh the data sources again.
 
     ![](images/lab01/media/image22.png)
