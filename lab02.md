@@ -1,8 +1,8 @@
 # Lab 2 - Deploying Azure Services
 
-<img src="images/lab02/media/image1.png" style="width:3.9375in;height:0.63819in" />
-<br/>
-<img src="images/lab02/media/image2.png" style="width:3.48973in;height:1.20479in" />
+![](images/lab02/media/image1.png)
+
+![](images/lab02/media/image2.png)
 
 #  
 
@@ -71,22 +71,22 @@ same tenant as your Dynamics 365 Customer Insights environment.
 1. On the Azure Portal home screen, select the **+ Create a
     resource** tile.
 
-    <img src="images/lab02/media/image3.png" style="width:6.875in;height:2.58333in" alt="A portion of the Azure Portal home screen is displayed with the + Create a resource tile highlighted." />
+    ![](images/lab02/media/image3.png)
 
 1.  In the **Search the Marketplace** text box, type **Resource group** and
     press the **Enter** key.
 
-    <img src="images/lab02/media/image4.png" style="width:7.5in;height:2.60972in" alt="On the new resource screen Resource group is entered as a search term." />
+    ![](images/lab02/media/image4.png)
 
 1.  Select the **Create** button on the **Resource group** overview
     page.
 
-    On the **Create a resource group** screen, select your desired
+    - On the **Create a resource group** screen, select your desired
     Subscription and Region. Be sure to choose a [region which supports](https://azure.microsoft.com/en-us/global-infrastructure/services/?products=synapse-analytics,machine-learning-service,storage,monitor) Azure Synapse Analytics workspaces, Azure Data Lake Storage, Azure Machine Learning, and Application Insights. For Resource group,
-    enter **customer-insights-workshop-rg**, then select the **Review +
-    Create** button.
+    
+    - enter **customer-insights-workshop-rg**, then select the **Review +Create** button.
 
-    <img src="images/lab02/media/image5.png" style="width:7.5in;height:4.76597in" alt="The Create a resource group form is displayed populated with Synapse-MCW as the resource group name." />
+    ![](images/lab02/media/image5.png)
 
 1.  Select the **Create** button once validation has passed.
 
@@ -106,16 +106,16 @@ same tenant as your Dynamics 365 Customer Insights environment.
 
     _Note: RBAC permissions changes can take up to **15 minutes** to propogate._
 
-    <img src="images/lab02/media/image6.png" style="width:6.02167in;height:2.29199in" alt="Graphical user interface, application Description automatically generated" />
+    ![](images/lab02/media/image6.png)
 
 1.  CTRL+click (on Windows) or CMD+click (on MacOS) the **Deploy to Azure** button below which will prompt you to
     enter several parameters before deploying Azure resources:
 
-    <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FArtisConsulting%2Fcustomer-insights-azure-data-workshop%2Fmain%2FAzureSetup%2FArmTemplate.json" target="_blank"><img src="images/lab02/media/image7.png" style="width:1.67708in;height:0.35417in" /></a>
+    <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FArtisConsulting%2Fcustomer-insights-azure-data-workshop%2Fmain%2FAzureSetup%2FArmTemplate.json" target="_blank">![](images/lab02/media/image7.png)</a>
 
 
 1.  On the Custom deployment form fill in the choose the right Azure
-    subscription and choose the customer-insights-workshop-rg resource group
+    subscription and choose the **customer-insights-workshop-rg** resource group
     you just created.
 
     Then fill in the following “Instance details”:
@@ -144,17 +144,17 @@ same tenant as your Dynamics 365 Customer Insights environment.
 
 
 1.  Review the requirements for the password again carefully. Click the
-    “Review + create” button.
+    **Review + create** button.
 
     If you get any validation failures, click the arrow to investigate
     the problems and resolve them by clicking the Previous button,
     changing the parameters, then trying again:
 
-    <img src="images/lab02/media/image8.png" style="width:3.70885in;height:2.28157in" alt="Graphical user interface, text, application, chat or text message Description automatically generated" />
+    ![](images/lab02/media/image8.png)
 
 1.  You should see a “Validation passed” message. Click **Create**.
 
-    <img src="images/lab02/media/image9.png" style="width:4.89652in;height:5.88624in" alt="Graphical user interface, application Description automatically generated" />
+    ![](images/lab02/media/image9.png)
 
 1.  The deployment should take around 5-10 minutes. If you get any
     errors, press the “Redeploy” button at the top and correct the
@@ -208,28 +208,28 @@ if you don’t have an appropriate group handy.
     **customer-insights-workshop-rg** click **+Add** and **Add role
     assignment**.
 
-    <img src="images/lab02/media/image10.png" style="width:6.24045in;height:2.2399in" alt="Graphical user interface, text, application Description automatically generated" />
+    ![](images/lab02/media/image10.png)
 
 1.  One at a time, grant each developer the Contributor role by choosing
     Role=Contributor and searching for their name, selecting their name, and
     clicking Save.
 
-    <img src="images/lab02/media/image11.png" style="width:4.69857in;height:2.67746in" alt="Graphical user interface, text, application, email Description automatically generated" />
-
+    ![](images/lab02/media/image11.png)
+    
 1.  Repeat the process for the Storage Blob Data Contributor role. One at a
     time, grant each developer the role by choosing Role=Storage Blob Data
     Contributor and searching for their name, selecting their name, and
     clicking Save. Be sure to assign **yourself** “Storage Blob Data
     Contributor” role, too!
 
-    <img src="images/lab02/media/image12.png" style="width:4.63606in;height:2.62537in" alt="Table Description automatically generated" />
+    ![](images/lab02/media/image12.png)
 
 1.  Next, you need to grant each developer Synapse Administrator role from
     within Synapse Studio. In the search box at the top of the portal,
     search for “asaworkspace” and click on the Synapse workspace (not the
     SQL Server) which appears under the Resources section.
 
-    <img src="images/lab02/media/image13.png" style="width:4.87568in;height:4.14641in" alt="Graphical user interface, text, application, email Description automatically generated" />
+    ![](images/lab02/media/image13.png)
 
 1.  On the Overview blade and the Essentials section, click the Workspace
     web URL link to open Synapse Studio.
@@ -237,13 +237,13 @@ if you don’t have an appropriate group handy.
     Go to the Manage left nav and the Access control left nav. Click the Add
     button to add a role:
 
-    <img src="images/lab02/media/image14.png" style="width:7.5in;height:4.16806in" alt="Graphical user interface, text, application, email Description automatically generated" />
+    ![](images/lab02/media/image14.png)
 
 1.  Choose Scope of Workspace, choose Role as Synapse Administrator, then
     type in the names of the teammates you wish to allow to access. Then
     click Apply.
 
-    <img src="images/lab02/media/image15.png" style="width:6.3238in;height:3.42756in" alt="Graphical user interface, text, application, email Description automatically generated" />
+    ![](images/lab02/media/image15.png)
 
 ## Step 4: Cleanup Azure resources (at conclusion of workshop)
 
@@ -253,7 +253,7 @@ Overview blade of the **customer-insights-workshop-rg** and click the
 **Delete resource group** button. Your Azure resources and all the data
 in them will be deleted and unrecoverable.
 
-<img src="images/lab02/media/image16.png" style="width:7.29268in;height:2.3024in" alt="Graphical user interface, application Description automatically generated" />
+![](images/lab02/media/image16.png)
 
 # Summary
 
