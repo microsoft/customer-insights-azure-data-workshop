@@ -75,7 +75,7 @@ query those datasets.
 
     ![](images/lab03/media/image3.png)
 
-1.  On the “Set up export” pane click “+ Add Connection”.
+1.  On the **Set up export** pane click **+ Add Connection**.
 
     ![](images/lab03/media/image4.png)
 
@@ -87,7 +87,7 @@ query those datasets.
 
     ![](images/lab03/media/image5.png)
 
-1.  On the “Set up Azure Synapse Analytics connection” pane, type in a name
+1.  On the **Set up Azure Synapse Analytics connection** pane, type in a name
     for this connection, choose the Azure subscription, Synapse workspace
     (asaworkspace\<suffix>), Storage account (asadatalake\<suffix>), and
     Container (staging).
@@ -96,8 +96,8 @@ query those datasets.
 
     ![](images/lab03/media/image6.png)
 
-1.  Scroll down to the bottom of the pane and check the “I agree” checkbox.
-    Then click Save. Note, if you don’t see the Save button in blue, check
+1.  Scroll down to the bottom of the pane and check the **I agree** checkbox.
+    Then click **Save**. Note, if you don’t see the Save button in blue, check
     that you have filled in all required fields above. If you have, check
     that you are in your Customer Insights environment rather than a
     Microsoft-provided demo environment like the “Retail Sales” demo
@@ -108,16 +108,16 @@ query those datasets.
 
 ## Step 2: Export entities to Synapse
 
-1.  On the “Set up Azure Synapse Analytics export” pane, choose the
-    connection you just setup, name your export “SynapseExport”, name your
-    Synapse Serverless SQL database name “CustomerInsightsExport”. Select
-    the Customer entity to export. Then click Save.
+1.  On the **Set up Azure Synapse Analytics export** pane, choose the
+    connection you just setup, name your **export SynapseExport**, name your
+    Synapse Serverless SQL database name **CustomerInsightsExport**. Select
+    the Customer entity to export. Then click **Save**.
 
     ![](images/lab03/media/image8.png)
 
     ![](images/lab03/media/image9.png)
 
-1.  Then press the “Run all” button at the top of the Exports screen:
+1.  Then press the **Run all** button at the top of the Exports screen:
 
     ![](images/lab03/media/image10.png)
 
@@ -195,7 +195,7 @@ query those datasets.
 
      ![](images/lab03/media/image16.png)
 
-1.  Click the “+ New folder” button and create a new folder called Charges.
+1.  Click the **+ New folder** button and create a new folder called Charges.
 
      ![](images/lab03/media/image17.png)
 
@@ -204,7 +204,7 @@ query those datasets.
      ![](images/lab03/media/image18.png)
 
 1.  Choose the CustomerCharges.csv file you previously downloaded and click
-    Upload.
+    **Upload**.
 
      ![](images/lab03/media/image19.png)
 
