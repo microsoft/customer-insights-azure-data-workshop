@@ -71,7 +71,7 @@ query those datasets.
 1.  Browse to <https://home.ci.ai.dynamics.com/> and sign in with your
     organizational account.
 
-    On the Data… Exports left nav, click the “+Add Export” button:
+    On the Data… Exports left nav, click the **+Add Export** button:
 
     ![](images/lab03/media/image3.png)
 
@@ -109,7 +109,7 @@ query those datasets.
 ## Step 2: Export entities to Synapse
 
 1.  On the **Set up Azure Synapse Analytics export** pane, choose the
-    connection you just setup, name your **export SynapseExport**, name your
+    connection you just setup, name your export **SynapseExport**, name your
     Synapse Serverless SQL database name **CustomerInsightsExport**. Select
     the Customer entity to export. Then click **Save**.
 
@@ -223,7 +223,7 @@ query those datasets.
 1.  To fix the header row, paste in the following query and fix \<suffix>
     then run the query: 
 
-```sql
+    ```sql
     SELECT
             TOP 100 *
     FROM
@@ -238,7 +238,7 @@ query those datasets.
                 Charge decimal(20,2),
                 ChargeDate date
             ) c
-```
+    ```
 
 > ![](images/lab03/media/image22.png)
 
@@ -270,13 +270,14 @@ query those datasets.
     CREATE VIEW dbo.CustomerChurnCharges
     AS
     SELECT *
-    <remainder of the prior query here>
+    <remainder of the prior query here> 
     ```
+   
 
-1.  Highlight all statements and click the Run button.
-
-    ![](images/lab03/media/image23.png)
-
+1. Highlight all statements and click the Run button.
+    
+     ![](images/lab03/media/image23.png)
+       
 1.  Now let’s create a new view which joins the Customer data exported from
     Customer Insights with the CustomerChurnCharges view. Copy and paste
     this query into the SQL script 1 window, make sure the “Use database”
