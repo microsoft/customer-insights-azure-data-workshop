@@ -113,7 +113,6 @@ same tenant as your Dynamics 365 Customer Insights environment.
 
     <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FArtisConsulting%2Fcustomer-insights-azure-data-workshop%2Fmain%2FAzureSetup%2FArmTemplate.json" target="_blank">![](images/lab02/media/image7.png)</a>
 
-
 1.  On the Custom deployment form fill in the choose the right Azure
     subscription and choose the **customer-insights-workshop-rg** resource group
     you just created.
@@ -140,8 +139,6 @@ same tenant as your Dynamics 365 Customer Insights environment.
         of a login name is defined as three or more consecutive alphanumeric
         characters. Save this password in your own password vault or note it
         securely somewhere.
-
-
 
 1.  Review the requirements for the password again carefully. Click the
     **Review + create** button.
