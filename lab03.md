@@ -1,8 +1,7 @@
 # Lab 3 - Customer Insights Integration with Azure Synapse Analytics
 
-<img src="images/lab03/media/image1.png" style="width:3.9375in;height:0.63819in" />
-<br/>
-<img src="images/lab03/media/image2.png" style="width:3.48973in;height:1.20479in" />
+![](images/lab03/media/image1.png)
+
 
 #  
 
@@ -74,11 +73,11 @@ query those datasets.
 
     On the Data… Exports left nav, click the “+Add Export” button:
 
-    <img src="images/lab03/media/image3.png" style="width:6.2092in;height:4.76108in" alt="Graphical user interface, application, Teams Description automatically generated" />
+    ![](images/lab03/media/image3.png)
 
 1.  On the “Set up export” pane click “+ Add Connection”.
 
-    <img src="images/lab03/media/image4.png" style="width:5.99042in;height:3.32338in" alt="Graphical user interface, text, application, email Description automatically generated" />
+    ![](images/lab03/media/image4.png)
 
 1.  Choose Azure Synapse Analytics from the dropdown. Note that the Azure
     Data Lake Store Gen 2 connection just exports files to your Azure Data
@@ -86,7 +85,7 @@ query those datasets.
     account and also creates a view called an “external table” in a Azure
     Synapse Analytics Serverless SQL Pool to query the data.
 
-    <img src="images/lab03/media/image5.png" style="width:5.91749in;height:3.2192in"  />
+    ![](images/lab03/media/image5.png)
 
 1.  On the “Set up Azure Synapse Analytics connection” pane, type in a name
     for this connection, choose the Azure subscription, Synapse workspace
@@ -95,7 +94,7 @@ query those datasets.
 
     _Note: Your user must be an Owner on the customer-insights-workshop-rg resource group for the following to work. If you are not sure you have Owner permissions, go back to Lab 2 [Step 2: Deploy the ARM template](lab02.md#step-2-deploy-the-arm-template) and work through the #1 item to "View my access". RBAC permissions changes can take up to **15 minutes** to propogate._
 
-    <img src="images/lab03/media/image6.png" style="width:5.89666in;height:7.11558in"  />
+    ![](images/lab03/media/image6.png)
 
 1.  Scroll down to the bottom of the pane and check the “I agree” checkbox.
     Then click Save. Note, if you don’t see the Save button in blue, check
@@ -105,7 +104,7 @@ query those datasets.
     environment. Also check you have appropriate permissions in Customer
     Insights.
 
-    <img src="images/lab03/media/image7.png" style="width:6.13627in;height:2.96916in"  />
+    ![](images/lab03/media/image7.png)
 
 ## Step 2: Export entities to Synapse
 
@@ -114,17 +113,17 @@ query those datasets.
     Synapse Serverless SQL database name “CustomerInsightsExport”. Select
     the Customer entity to export. Then click Save.
 
-    <img src="images/lab03/media/image8.png" style="width:5.81331in;height:4.78192in"  />
+    ![](images/lab03/media/image8.png)
 
-    <img src="images/lab03/media/image9.png" style="width:5.92791in;height:8.29282in"  />
+    ![](images/lab03/media/image9.png)
 
 1.  Then press the “Run all” button at the top of the Exports screen:
 
-    <img src="images/lab03/media/image10.png" style="width:7.5in;height:2.22431in" alt="Graphical user interface, text, application, email Description automatically generated" />
+    ![](images/lab03/media/image10.png)
 
 1.  Wait until the screen shows it is completed successfully:
 
-    <img src="images/lab03/media/image11.png" style="width:7.5in;height:0.92847in" alt="Graphical user interface, application, Word Description automatically generated" />
+    ![](images/lab03/media/image11.png)
 
 ## Step 3: View data in Synapse Serverless using Synapse Studio
 
@@ -135,24 +134,24 @@ query those datasets.
     and click on the Synapse workspace (not the SQL Server) which appears
     under the Resources section.
 
-    <img src="images/lab03/media/image12.png" style="width:4.87568in;height:4.14641in" alt="Graphical user interface, text, application, email Description automatically generated" />
+    ![](images/lab03/media/image12.png)
 
 1.  On the Overview blade and the Essentials section, click the Workspace
     web URL link to open Synapse Studio.
 
     Click on the Data pane on the left. It is the
-    <img src="images/lab03/media/image13.png" style="width:0.28129in;height:0.36463in" />
+    ![](images/lab03/media/image13.png)
     icon. Expand the Databases, CustomerInsightsExport database, Tables
     folder, then right click on the Customer table and choose New SQL
     script… Select TOP 100 rows:
 
-    <img src="images/lab03/media/image14.png" style="width:6.9593in;height:4.28185in" alt="Graphical user interface, text, application Description automatically generated" />
+    ![](images/lab03/media/image14.png)
 
 1.  Ensure the “Connect to” dropdown has “Built-in” (meaning the Synapse
     Serverless SQL pool) selected. Then click the Run button in the SQL
     script 1 tab to view some rows in your exported Customer data.
 
-    <img src="images/lab03/media/image15.png" style="width:7.5in;height:6.24167in" alt="Graphical user interface, text Description automatically generated" />
+    ![](images/lab03/media/image15.png)
 
 1.  Highlight the current query and press the backspace key to delete the
     query text. Paste the following query into the query window, replace
@@ -176,7 +175,8 @@ query those datasets.
 
 1.  To validate the Synapse MSI has the proper permissions created by the ARM template, go to the Azure portal, go to the customer-insights-workshop-rg resource group, click the Access control (IAM) tab, and confirm asaworkspace\<suffix> has Storage Blob Data Contributor permissions.
 
-    <img src="images/lab03/media/image24.png"  />
+     ![](images/lab03/media/image24.png)
+
 
 
 ## Step 4: Enrich the customer data
@@ -188,37 +188,37 @@ query those datasets.
     Storage Gen2 (ADLS).
 
     Click on the Data pane on the left. It is the
-    <img src="images/lab03/media/image13.png" style="width:0.28129in;height:0.36463in" />
+    ![](images/lab03/media/image13.png)
     icon. Then go to the Linked tab. Expand Azure Data Lake Storage Gen2 and
     click on the default storage account (asaworkspace\<suffix>) and click
     on the staging container.
 
-    <img src="images/lab03/media/image16.png" style="width:3.50049in;height:3.6776in" alt="Graphical user interface, text, application Description automatically generated" />
+     ![](images/lab03/media/image16.png)
 
 1.  Click the “+ New folder” button and create a new folder called Charges.
 
-    <img src="images/lab03/media/image17.png" style="width:7.5in;height:1.74236in" alt="Graphical user interface, text, application, email Description automatically generated" />
+     ![](images/lab03/media/image17.png)
 
 1.  Double click the new Charges folder. Then click the Upload button:
 
-    <img src="images/lab03/media/image18.png" style="width:4.35477in;height:2.09404in" />
+     ![](images/lab03/media/image18.png)
 
 1.  Choose the CustomerCharges.csv file you previously downloaded and click
     Upload.
 
-    <img src="images/lab03/media/image19.png" style="width:6.3238in;height:3.04209in" alt="Graphical user interface, text, application, email Description automatically generated" />
+     ![](images/lab03/media/image19.png)
 
 1.  Right click on the CustomerCharges.csv file that has been uploaded to
     ADLS and choose New SQL Script… Select TOP 100 rows.
 
-    <img src="images/lab03/media/image20.png" style="width:4.79234in;height:3.15669in" alt="Graphical user interface, text, application, email Description automatically generated" />
+     ![](images/lab03/media/image20.png)
 
 1.  Ensure the “Connect to” dropdown has “Built-in” (meaning the Synapse
     Serverless SQL pool) selected then click Run. This OPENROWSET query will
     read from the CustomerCharges.csv file in ADLS. Notice that the header
     row is treated like a row of data.
 
-    <img src="images/lab03/media/image21.png" style="width:7.5in;height:4.54722in" alt="Graphical user interface, text, application, email Description automatically generated" />
+    ![](images/lab03/media/image21.png)
 
 1.  To fix the header row, paste in the following query and fix \<suffix>
     then run the query: 
@@ -240,7 +240,7 @@ query those datasets.
             ) c
 ```
 
-> <img src="images/lab03/media/image22.png" style="width:7.5in;height:5.17639in" alt="Graphical user interface, text, application, email Description automatically generated" />
+> ![](images/lab03/media/image22.png)
 
 8.  Replace the “SELECT TOP 100 \*” line of the query with the following
     code which creates a CI database with the [UTF8
@@ -275,7 +275,7 @@ query those datasets.
 
 1.  Highlight all statements and click the Run button.
 
-    <img src="images/lab03/media/image23.png" style="width:7.5in;height:6.52778in" alt="Graphical user interface, text, application, email Description automatically generated" />
+    ![](images/lab03/media/image23.png)
 
 1.  Now let’s create a new view which joins the Customer data exported from
     Customer Insights with the CustomerChurnCharges view. Copy and paste
