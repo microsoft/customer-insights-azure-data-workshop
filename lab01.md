@@ -97,11 +97,11 @@ and wish take advantage of a trial environment, visit
 
 ## Step 2: Load CustomerDemographics sample dataset to Customer Insights
 
-1.  Go to the Data… Data sources tab and click “Add data source”
+1.  Go to the Data… Data sources tab and click **Add data source**
 
     ![](images/lab01/media/image3.png)
 
-1.  Choose “Microsoft Power Query” and enter a dataset name **CustomerDemographics** and click Next.
+1.  Choose “Microsoft Power Query” and enter a dataset name **CustomerDemographics** and click **Next**.
 
     ![](images/lab01/media/lab1-01.png)
 
@@ -119,10 +119,10 @@ and wish take advantage of a trial environment, visit
     
 1.  Choose **Transform data**.
 
-   ![](images/lab01/media/image7.png)
+    ![](images/lab01/media/image7.png)
+   
 
-1.  Click the Transform tab at the top of the Power Query screen and then
-    click **Use first row as headers**
+1.  Click the Transform tab at the top of the Power Query screen and then click **Use first row as headers**
 
     ![](images/lab01/media/image8.png)
 
@@ -137,7 +137,7 @@ and wish take advantage of a trial environment, visit
     ![](images/lab01/media/image10.png)
 
 1.  Choose **refresh manually** (since this is a static sample dataset that
-    won’t change) and click Save.
+    won’t change) and click **Save**.
 
     ![](images/lab01/media/image11.png)
 
@@ -151,17 +151,17 @@ and wish take advantage of a trial environment, visit
 1.  Click “Add data source”, "Microsoft Power Query", and name it
     **CustomerServiceAttributes** and click **Next**:
 
-    ![](images/lab01/media/image13.png)
+    ![](images/lab01/media/lab01-02.png)
 
 1.  Choose Web API like on the previous data source and then paste in the
-    following URL:
+    following URL and accept the existing connection since this data source is from the same
+    website.
 
     <https://raw.githubusercontent.com/ArtisConsulting/customer-insights-azure-data-workshop/main/SampleData/CustomerServiceAttributes.csv>
 
-    Accept the existing connection since this data source is from the same
-    website.
 
-   ![](images/lab01/media/image14.png)
+
+    ![](images/lab01/media/image14.png)
 
 
 1.  Click **Transform data**:
@@ -183,8 +183,8 @@ and wish take advantage of a trial environment, visit
 
     ![](images/lab01/media/image18.png)
 
-1.  Rename the query to CustomerServiceAttributes and then click click the
-    Next button at the bottom of the screen.
+1.  Rename the query to **CustomerServiceAttributes** and then click the
+    **Next** button at the bottom of the screen.
 
     ![](images/lab01/media/image19.png)
 
@@ -196,7 +196,7 @@ and wish take advantage of a trial environment, visit
 ## Step 4: Ensure entities are loaded
 
 1.  Once the data sources are done refreshing (it takes approximately 5
-    minutes), go to the Entities tab and click each entity:
+    minutes), go to the **Entities** tab and click each entity:
 
     ![](images/lab01/media/image21.png)
 
@@ -214,23 +214,23 @@ is a prerequisite for later steps and labs.
 
 ## Step 1: Map fields in your customer entities
 
-1.  On the Data… Unify left nav, click “+ Select entities” on the Map tab:
+1.  On the Data… Unify left nav, click **+ Select entities and fields** on the Map tab:
 
-    ![](images/lab01/media/image23.png)
+    ![](images/lab01/media/lab1-03.png)
 
 1.  Click the checkboxes next to the two entities you wish to map then click
-    Apply:
+    **Apply**:
 
     ![](images/lab01/media/image24.png)
 
-1.  Click the CustomerDemographics entity. Because “intelligent mapping” is
+1.  Click the **CustomerDemographics** entity. Because “intelligent mapping” is
     selected, it will have already set the Type on the Country, customerID,
-    gender and zip columns. Set the primary key to customerID.
+    gender and zip columns. Set the primary key to **customerID**.
 
     ![](images/lab01/media/image25.png)
 
-1.  Click on the CustomerServiceAttributes entity. Set the primary key to
-    customerID. Notice the intelligent mapping has incorrectly categorized
+1.  Click on the **CustomerServiceAttributes** entity. Set the primary key to
+    **customerID**. Notice the intelligent mapping has incorrectly categorized
     the PhoneService column as this column indicates whether this telco
     customer has phone service or not. Dropdown the Type dropdown next to
     PhoneService and choose the blank value to blank out the Type on this
@@ -241,26 +241,19 @@ is a prerequisite for later steps and labs.
 
 ## Step 2: Match your customer entities on customerID
 
-1.  Go to the Match tab and click the “+Set order” button.
-
-    ![](images/lab01/media/image27.png)
-
-1.  Choose CustomerDemographics to the first or primary entity. Choose
-    CustomerServiceAttributes to be the second entity. Click Done.
+1.  Choose **CustomerDemographics** to the first or primary entity. Choose
+    **CustomerServiceAttributes** to be the second entity. Click Done.
 
     ![](images/lab01/media/image28.png)
 
-
-1.  Click the Add Rule button:
+1.  Click the **Add Rule** button:
 
     ![](images/lab01/media/image29.png)
 
-
-1.  Select customerID from both “Select field” dropdowns. Name this rule and
-    click Done.
+1.  Select **customerID** from both "Select field" dropdowns. Name this **rule** and
+    click **Done**.
 
     ![](images/lab01/media/image30.png)
-
 
 1.  Click the **Save** button at the top and then click the **Run** button
     at the top.
