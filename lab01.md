@@ -159,10 +159,7 @@ and wish take advantage of a trial environment, visit
 
     <https://raw.githubusercontent.com/ArtisConsulting/customer-insights-azure-data-workshop/main/SampleData/CustomerServiceAttributes.csv>
 
-
-
     ![](images/lab01/media/image14.png)
-
 
 1.  Click **Transform data**:
 
