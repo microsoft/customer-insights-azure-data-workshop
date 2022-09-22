@@ -1,10 +1,9 @@
 # Lab 1 - Customer Insights Data Sources, Unification and Enrichment
 
-<img src="images/lab01/media/image1.png" style="width:3.9375in;height:0.63819in" />
-<br/>
-<img src="images/lab01/media/image2.png" style="width:3.48973in;height:1.20479in" />
+![](images/lab01/media/image1.png)
 
-#  
+![](images/lab01/media/image2.png)
+ 
 
 Contents
 
@@ -100,59 +99,59 @@ and wish take advantage of a trial environment, visit
 
 1.  Go to the Data… Data sources tab and click “Add data source”
 
-    <img src="images/lab01/media/image3.png" style="width:7.5in;height:4.46597in" alt="Graphical user interface, application, Teams Description automatically generated" />
+    ![](images/lab01/media/image3.png)
 
 1.  Choose “Microsoft Power Query” and enter a dataset name “CustomerDemographics” and click Next.
 
-    <img src="images/lab01/media/image4.png"/>
+    ![](images/lab01/media/image4.png)
 
 1.  Search for “Web” and choose “Web API” which is a quick way to import a
     dataset from a public website. (Your actual business data could come
     from any other type of data source which Power Query Online supports.)
 
-    <img src="images/lab01/media/image5.png" style="width:7.5in;height:2.39375in" alt="Graphical user interface, text, application, email Description automatically generated" />
+    ![](images/lab01/media/image5.png)
 
 1.  Paste in the following URL and click Next:
 
     <https://raw.githubusercontent.com/ArtisConsulting/customer-insights-azure-data-workshop/main/SampleData/CustomerDemographics.csv>
 
-    <img src="images/lab01/media/image6.png" style="width:7.5in;height:4.43889in" alt="Graphical user interface, application Description automatically generated" />
-
+    ![](images/lab01/media/image6.png)
+    
 1.  Choose “Transform data”
 
-    <img src="images/lab01/media/image7.png" style="width:7.5in;height:4.54444in" alt="Graphical user interface, application Description automatically generated" />
+   ![](images/lab01/media/image7.png)
 
 1.  Click the Transform tab at the top of the Power Query screen and then
     click “Use first row as headers”
 
-    <img src="images/lab01/media/image8.png" style="width:7.5in;height:4.44375in" alt="Graphical user interface, application Description automatically generated" />
+    ![](images/lab01/media/image8.png)
 
 1.  Confirm the column names read customerID, gender, etc. instead of
     Column1, Column2, etc.
 
-    <img src="images/lab01/media/image9.png" style="width:7.5in;height:4.39444in" alt="Graphical user interface, application Description automatically generated" />
-
+    ![](images/lab01/media/image9.png)
+    
 1.  Change the query name to CustomerDemographics. Click the Next button at
     the bottom of the screen.
 
-    <img src="images/lab01/media/image10.png" style="width:7.5in;height:3.9875in" alt="Graphical user interface, application, table Description automatically generated" />
+    ![](images/lab01/media/image10.png)
 
 1.  Choose "refresh manually" (since this is a static sample dataset that
     won’t change) and click Save.
 
-    <img src="images/lab01/media/image11.png" style="width:7.5in;height:4.53125in" alt="Graphical user interface, text, application Description automatically generated" />
+    ![](images/lab01/media/image11.png)
 
 1.  While you wait for the CustomerDemographics data source to refresh,
     continue onto the next step.
 
-    <img src="images/lab01/media/image12.png" style="width:7.5in;height:2.20347in" alt="Graphical user interface, text, application Description automatically generated" />
+    ![](images/lab01/media/image12.png)
 
 ## Step 3: Load CustomerServiceAttributes sample dataset to Customer Insights
 
 1.  Click “Add data source”, "Microsoft Power Query", and name it
     CustomerServiceAttributes and click Next:
 
-    <img src="images/lab01/media/image13.png"  />
+    ![](images/lab01/media/image13.png)
 
 1.  Choose Web API like on the previous data source and then paste in the
     following URL:
@@ -162,47 +161,50 @@ and wish take advantage of a trial environment, visit
     Accept the existing connection since this data source is from the same
     website.
 
-    <img src="images/lab01/media/image14.png" style="width:7.5in;height:4.80278in" alt="Graphical user interface, text, application Description automatically generated" />
+   ![](images/lab01/media/image14.png)
+
 
 1.  Click “Transform data”:
 
-    <img src="images/lab01/media/image15.png" style="width:7.5in;height:4.78681in" alt="Graphical user interface, application Description automatically generated" />
+    ![](images/lab01/media/image15.png)
+
 
 1.  On the Transform tab click “User first row as headers”:
 
-    <img src="images/lab01/media/image16.png" style="width:7.5in;height:4.79236in" alt="Graphical user interface, application Description automatically generated" />
+    ![](images/lab01/media/image16.png)
 
 1.  Confirm the column headers now say customerID, tenure, PhoneService,
     etc.
 
-    <img src="images/lab01/media/image17.png" style="width:7.5in;height:2.05625in" alt="Graphical user interface Description automatically generated" />
+    ![](images/lab01/media/image17.png)
 
 1.  Left click on the ABC icon next to the tenure column header and choose
     “Whole number” to convert this column to an integer data type.
 
-    <img src="images/lab01/media/image18.png" style="width:6.69885in;height:3.13585in" alt="Graphical user interface, application Description automatically generated" />
+    ![](images/lab01/media/image18.png)
 
 1.  Rename the query to CustomerServiceAttributes and then click click the
     Next button at the bottom of the screen.
 
-    <img src="images/lab01/media/image19.png" style="width:7.5in;height:3.98681in" alt="Graphical user interface, application, table Description automatically generated" />
+    ![](images/lab01/media/image19.png)
 
 1.  Choose to refresh manually and click Save.
 
-    <img src="images/lab01/media/image20.png" style="width:7.5in;height:3.60486in" />
+    ![](images/lab01/media/image20.png)
+
 
 ## Step 4: Ensure entities are loaded
 
 1.  Once the data sources are done refreshing (it takes approximately 5
     minutes), go to the Entities tab and click each entity:
 
-    <img src="images/lab01/media/image21.png" style="width:7.5in;height:2.27431in" alt="Graphical user interface, text, application Description automatically generated" />
+    ![](images/lab01/media/image21.png)
 
 1.  On the Data tab for each entity, ensure that rows have been loaded and
     are visible. If no rows are shown, go back to the “Data sources” left
     nav and refresh the data sources again.
 
-    <img src="images/lab01/media/image22.png" style="width:7.5in;height:3.59444in" alt="Graphical user interface Description automatically generated" />
+    ![](images/lab01/media/image22.png)
 
 # Exercise 2: Unify customer entities
 
@@ -214,18 +216,18 @@ is a prerequisite for later steps and labs.
 
 1.  On the Data… Unify left nav, click “+ Select entities” on the Map tab:
 
-    <img src="images/lab01/media/image23.png" style="width:7.5in;height:3.47361in" alt="Graphical user interface, application, Teams Description automatically generated" />
+    ![](images/lab01/media/image23.png)
 
 1.  Click the checkboxes next to the two entities you wish to map then click
     Apply:
 
-    <img src="images/lab01/media/image24.png" style="width:3.46923in;height:4.83401in" alt="Graphical user interface, text, application Description automatically generated" />
+    ![](images/lab01/media/image24.png)
 
 1.  Click the CustomerDemographics entity. Because “intelligent mapping” is
     selected, it will have already set the Type on the Country, customerID,
     gender and zip columns. Set the primary key to customerID.
 
-    <img src="images/lab01/media/image25.png" style="width:7.5in;height:5.59444in" alt="Graphical user interface, application, email Description automatically generated" />
+    ![](images/lab01/media/image25.png)
 
 1.  Click on the CustomerServiceAttributes entity. Set the primary key to
     customerID. Notice the intelligent mapping has incorrectly categorized
@@ -234,41 +236,45 @@ is a prerequisite for later steps and labs.
     PhoneService and choose the blank value to blank out the Type on this
     column. Then click the Save button at the top of the page.
 
-    <img src="images/lab01/media/image26.png" style="width:7.5in;height:4.6625in" alt="Graphical user interface, application Description automatically generated" />
+    ![](images/lab01/media/image26.png)
+
 
 ## Step 2: Match your customer entities on customerID
 
 1.  Go to the Match tab and click the “+Set order” button.
 
-    <img src="images/lab01/media/image27.png" style="width:7.5in;height:4.6in" alt="Graphical user interface, application Description automatically generated" />
+    ![](images/lab01/media/image27.png)
 
 1.  Choose CustomerDemographics to the first or primary entity. Choose
     CustomerServiceAttributes to be the second entity. Click Done.
 
-    <img src="images/lab01/media/image28.png" style="width:6.06335in;height:4.75066in" alt="Graphical user interface, text, application, email Description automatically generated" />
+    ![](images/lab01/media/image28.png)
+
 
 1.  Click the Add Rule button:
 
-    <img src="images/lab01/media/image29.png" style="width:7.5in;height:2.56389in" alt="Graphical user interface, text, application, email Description automatically generated" />
+    ![](images/lab01/media/image29.png)
+
 
 1.  Select customerID from both “Select field” dropdowns. Name this rule and
     click Done.
 
-    <img src="images/lab01/media/image30.png" style="width:6.04251in;height:6.9593in" alt="Graphical user interface, text, application, email Description automatically generated" />
+    ![](images/lab01/media/image30.png)
+
 
 1.  Click the **Save** button at the top and then click the **Run** button
     at the top.
 
-    <img src="images/lab01/media/image31.png" style="width:7.5in;height:3.12431in" alt="Graphical user interface, text, application, email Description automatically generated" />
+    ![](images/lab01/media/image31.png)
 
 1.  Wait while the matching runs. It takes approximately 5 minutes.
 
-    <img src="images/lab01/media/image32.png" style="width:7.5in;height:5.22292in" alt="Graphical user interface, text, application, email Description automatically generated" />
+    ![](images/lab01/media/image32.png)
 
 1.  When the matching is complete, validate that you have the proper matched
     record counts:
 
-    <img src="images/lab01/media/image33.png" style="width:7.5in;height:4.25556in" alt="Graphical user interface, text, application, email Description automatically generated" />
+    ![](images/lab01/media/image33.png)
 
 1.  If your own datasets contain duplication of data, then explore the [deduplication](https://docs.microsoft.com/en-us/dynamics365/customer-insights/audience-insights/match-entities#add-deduplication-rules) features of Dynamics 365 Customer Insights.
 
@@ -278,12 +284,12 @@ is a prerequisite for later steps and labs.
     any fields. For the sample dataset, nothing needs to be done
     except click **Save** and click **Run… Run only Merge**.
 
-    <img src="images/lab01/media/image34.png" style="width:7.5in;height:3.57222in" alt="Graphical user interface, text, application Description automatically generated" />
+    ![](images/lab01/media/image34.png)
 
 1.  When merging is complete the screen will update with the current matched
     records count:
 
-    <img src="images/lab01/media/image35.png" style="width:7.5in;height:2.77431in" alt="Graphical user interface, text, application Description automatically generated" />
+    ![](images/lab01/media/image35.png)
 
 # Exercise 3: Enrich customer entities
 
@@ -296,29 +302,29 @@ In this section you will enrich your customer entities in your Dynamics
     tile to enrich your data with interest affinities from people in a
     similar demographic to your customers.
 
-    <img src="images/lab01/media/image36.png" style="width:6.61551in;height:6.02167in" alt="Graphical user interface, application Description automatically generated" />
+    ![](images/lab01/media/image36.png)
 
 1.  On the overview tab, click Next
 
-    <img src="images/lab01/media/image37.png" style="width:7.5in;height:3.90069in" alt="Graphical user interface, text, application Description automatically generated" />
+    ![](images/lab01/media/image37.png)
 
 1.  On the Interests tab choose “Internet & Telecom” from the dropdown (or
     whatever industry makes sense for your business).
 
-    <img src="images/lab01/media/image38.png" style="width:7.5in;height:5.28889in" alt="Graphical user interface, application Description automatically generated" />
+    ![](images/lab01/media/image38.png)
 
 1.  Click the + icon next to Search Engines, Internet Service Plans,
     Teleconferencing, and Cable Services, then click Next.
 
-    <img src="images/lab01/media/image39.png" style="width:5.17781in;height:3.28171in" alt="Graphical user interface, application, Teams Description automatically generated" />
+    ![](images/lab01/media/image39.png)
 
 1.  On the Preferences tab, review the settings and click Next.
 
-    <img src="images/lab01/media/image40.png" style="width:7.5in;height:6.86806in" alt="Graphical user interface, text, application Description automatically generated" />
+    ![](images/lab01/media/image40.png)
 
 1.  On the Required data tab choose the Customer dataset and click Next:
 
-    <img src="images/lab01/media/image41.png" style="width:7.5in;height:4.51875in" alt="Graphical user interface, text, application, email Description automatically generated" />
+    ![](images/lab01/media/image41.png)
 
 1.  On the Attribute mapping tab, follow the instructions. For the sample
     dataset, ensure the Gender, Country/Region, and Postal code fields are
@@ -327,17 +333,17 @@ In this section you will enrich your customer entities in your Dynamics
     fields](https://docs.microsoft.com/en-us/dynamics365/customer-insights/audience-insights/enrichment-microsoft#map-your-fields).
     Click Next.
 
-    <img src="images/lab01/media/image42.png" style="width:7.5in;height:7.50972in" alt="Graphical user interface, application, email Description automatically generated" />
+    ![](images/lab01/media/image42.png)
 
 1.  On the Review and run tab, review the settings, name your enrichment _MicrosoftInterestAffinityEnrichment_ and
     click “**Save enrichment**”.
 
-    <img src="images/lab01/media/image43.png" style="width:7.5in;height:7.63542in" alt="Graphical user interface, text, application Description automatically generated" />
+    ![](images/lab01/media/image43.png)
 
 1.  Then click Run:
 
-    <img src="images/lab01/media/image44.png" style="width:7.5in;height:4.62917in" alt="Graphical user interface, text, application, email, Teams Description automatically generated" />
-
+    ![](images/lab01/media/image44.png)
+    
 # Summary
 
 In this lab, you loaded, mapped, merged and enriched customer entities
