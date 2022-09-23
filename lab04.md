@@ -118,7 +118,8 @@ data.
     
   > *Note: Even though the documented connection string for Synapse Serverless SQL is asaworkspace\<suffix>-ondemand.**sql.azuresynapse.net**, asaworkspace\<suffix>-ondemand.**database.windows.net** also works.*
 
-    ![](images/lab04/media/image9.png)
+    
+   ![](images/lab04/media/image9.png)
 
 4.  Upon creation, “telcochurn” will appear in the datastore
     selection, click on it to create a new dataset.
@@ -158,7 +159,7 @@ data.
 
 10.  Once complete, there will be a success notification.
 
-    ![](images/lab04/media/image16.png)
+     ![](images/lab04/media/image16.png)
 
 ## Step 3: Experiment Design
 
