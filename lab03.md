@@ -2,6 +2,7 @@
 
 ![](images/lab03/media/image1.png)
 
+![](images/lab03/media/image2.png)
 
 #  
 
