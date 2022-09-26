@@ -226,20 +226,20 @@ query those datasets.
 
     ```sql
     SELECT
-            TOP 100 *
+    TOP 100 *
     FROM
-            OPENROWSET(
-                BULK 'https://asadatalake<suffix>.dfs.core.windows.net/staging/Charges/',
-                FORMAT = 'CSV',
-                PARSER_VERSION='2.0',
-                HEADER_ROW = TRUE
-            )
-            WITH (
-                customerID VARCHAR(20),
-                Charge decimal(20,2),
-                ChargeDate date
-            ) c
-    ```
+    OPENROWSET(
+      BULK 'https://asadatalake<suffix>.dfs.core.windows.net/staging/Charges/',
+      FORMAT = 'CSV',
+      PARSER_VERSION='2.0',
+      HEADER_ROW = TRUE
+      )
+      WITH (
+      customerID VARCHAR(20),
+      Charge decimal(20,2),
+      ChargeDate date
+      ) c
+     ```
 
 > ![](images/lab03/media/image22.png)
 
