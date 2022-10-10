@@ -56,11 +56,11 @@ learning models into Customer Insights.
 1.  Browse to <https://portal.azure.com> and sign in with your
     organizational account.
 
-    Search for “asastore” in the search box at the top:
+    Search for **asastore** in the search box at the top:
 
     ![](images/lab05/media/image3.png)
 
-1.  On the Security + networking… Access keys blade, click the “Show keys”
+1.  On the Security + networking… Access keys blade, click the **Show keys**
     button:
 
     ![](images/lab05/media/image4.png)
@@ -78,38 +78,38 @@ learning models into Customer Insights.
 
     ![](images/lab05/media/image6.png)
 
-1.  Choose Microsoft Power Query and give it the name “AzureMlResults” and click Next.
+1.  Choose Microsoft Power Query and give it the name **AzureMlResults** and click Next.
 
-    ![](images/lab05/media/image7.png)
+    ![](images/lab05/media/AzureMlResults.png)
 
-1.  Click the Azure tab in the Power Query Online window and click the Azure
-    Blobs option:
+1.  Click the Azure tab in the Power Query Online window and click the **Azure
+    Blobs** option:
 
     ![](images/lab05/media/image8.png)
 
-1.  In the “Account name or URL” type in the name of your storage account
+1.  In the **Account name or URL** type in the name of your storage account
     for Azure ML (asastore\<suffix>) replacing your suffix. Change the
-    Authentication kind to Account key. Paste in the storage account key for
+    Authentication kind to **Account key**. Paste in the storage account key for
     your asastore\<suffix> storage account. Click Next.
 
-   ![](images/lab05/media/image9.png)
+    ![](images/lab05/media/image9.png)
 
-1.  Click the checkbox on the container called “azureml-blobstore-\<guid>”
+1.  Click the checkbox on the container called **azureml-blobstore-\<guid>**
     and click the Transform data button.
 
     ![](images/lab05/media/image10.png)
 
-1.  On the Name column click the dropdown and choose Text filters… Equals:
+1.  On the Name column click the dropdown and choose **Text filters**… **Equals**:
 
     ![](images/lab05/media/image11.png)
 
-1.  Paste “azureml/Decision_Tree_Results/dtresults/data.csv” into the Filter
+1.  Paste **azureml/Decision_Tree_Results/dtresults/data.csv** into the Filter
     rows dialog and click Ok.
 
     ![](images/lab05/media/image12.png)
 
 1.  Power Query Online should now show one row with the CSV file which is
-    the output of your ML model. Click the \[Binary\] link in the Content
+    the output of your ML model. Click the **\[Binary\]** link in the Content
     column for that one row:
 
     ![](images/lab05/media/image13.png)
@@ -120,20 +120,20 @@ learning models into Customer Insights.
     ![](images/lab05/media/image14.png)
 
 1.  The first row has now been promoted to column headers. Now click the ABC
-    button on the Scored Probabilities column and choose “Decimal number” to
+    button on the Scored Probabilities column and choose **Decimal number** to
     convert that column to a decimal.
 
     ![](images/lab05/media/image15.png)
 
-1.  Rename this query to PredictedCustomerChurn.
+1.  Rename this query to **PredictedCustomerChurn**.
 
     ![](images/lab05/media/image16.png)
 
-1.  On the “Add column” tab click the “Conditional column” button:
+1.  On the **Add column** tab click the **Conditional column** button:
 
     ![](images/lab05/media/image17.png)
 
-1.  Name the new column ChurnRisk and setup the conditions as follows. If
+1.  Name the new column **ChurnRisk** and setup the conditions as follows. If
     the model predicts the customer will not churn (Scored Labels=No),
     return Low. If the model predicts they have a 50% or greater probability
     of churning (because if it got to this condition, Scored Labels must
@@ -142,7 +142,7 @@ learning models into Customer Insights.
 
     ![](images/lab05/media/image18.png)
 
-1.  Accept manually should be selected. Click Save:
+1.  Accept manually should be selected. Click **Save**:
 
     ![](images/lab05/media/image19.png)
 
@@ -151,49 +151,52 @@ learning models into Customer Insights.
 
     ![](images/lab05/media/image20.png)
 
-1.  On the Data… Unify left nav, click the Edit fields button.
+1.  On the Data… Unify left nav, click the **Edit** button.
 
-    ![](images/lab05/media/image21.png)
+    ![](images/lab05/media/unify1.png)
+    
+1. On the Unify tab, click on **Select entities and fields**
 
-1.  Click the checkmark next to the PredictedCustomerChurn entity and click
-    Apply:
+    ![](images/lab05/media/unify2.png)
 
-    ![](images/lab05/media/image22.png)
+1.  Click the checkmark next to the **PredictedCustomerChurn** entity and click
+    **Apply**:
+
+    ![](images/lab05/media/unify3.png)
 
 1.  Click the PredictedCustomerChurn entity and set the primary key to
-    customerID and click Save.
+    customerID and click **Next**.
 
-   ![](images/lab05/media/image23.png)
-
-1.  Go to the Match tab and click the **+Add entity** button and choose the
-    PredictedCustomerChurn entity:
-
-    ![](images/lab05/media/image24.png)
+    ![](images/lab05/media/image23.png)
 
 1.  Click the **+Add rule** button under the AzureMlResults :
     PredictedCustomerChurn entity:
 
     ![](images/lab05/media/image25.png)
 
-1.  Choose the CustomerDemographics entity and the customerID fields on both
-    entities. Name this rule and click Done:
+1.  Choose the **CustomerDemographics** entity and the **customerID** fields on both
+    entities. Name this rule and click Done.
 
     ![](images/lab05/media/image26.png)
 
-1.  Click Save and then Run at the top of the screen:
+1.  Click on **Save and close**
+     
+    ![](images/lab05/media/unify4.png)
+     
+1. Click **Run matching conditions only** at the top of the screen:
 
-    ![](images/lab05/media/image27.png)
+    ![](images/lab05/media/unify5.png)
 
-1.  Once the run is successful, your results should look like:
+1.  Once the run is successful, click on the **Edit** button under **unified customer fields**.
 
-    ![](images/lab05/media/image28.png)
+    ![](images/lab05/media/unify6.png)
 
-1.  On the Merge tab, click the “Excluded fields” link:
+1.  On the customer fields tab, click the **Excluded fields** link:
 
     ![](images/lab05/media/image29.png)
 
 1.  Click the arrow next to Scored Labels, Scored Probabilities, and
-    ChurnRisk fields to include those fields in the merging. Click the Done
+    ChurnRisk fields to include those fields in the merging. Click the **Done**
     button.
 
     ![](images/lab05/media/image30.png)
@@ -209,9 +212,9 @@ learning models into Customer Insights.
     
     ![](images/lab05/media/image33.png)
 
-1.  Click **Save** and **Run… Run Only Merge** at the top of the screen.
+1.  Click **Save** and click on **unify customer profiles** at the top of the screen.
 
-    ![](images/lab05/media/image34.png)
+    ![](images/lab05/media/unify7.png)
 
 1.  Once the run is successful, go to the Data… Entities left nav, click on
     the Customer entity, go to the Data tab and scroll to the right. You
@@ -232,17 +235,17 @@ learning models into Customer Insights.
 
 ## Step 3: Segment your customers at highest risk of churning
 
-1.  Go to the Customers left nav and click “Search & filter index”. Let’s
+1.  Go to the Customers left nav and click **Search & filter index**. Let’s
     find any customers which have a high probability of churning.
 
     ![](images/lab05/media/image36.png)
 
-1.  Click the “+Add” button to add a field to the index:
+1.  Click the **+Add** button to add a field to the index:
 
     ![](images/lab05/media/image37.png)
 
 1.  Check the Churn, PredictedChurn and ChurnRisk fields (decimal fields are
-    not currently supported) and click Add.
+    not currently supported) and click **Add**.
 
     ![](images/lab05/media/image38.png)
     
