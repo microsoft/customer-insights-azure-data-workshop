@@ -18,13 +18,11 @@ Contents
 
 [Exercise 1: Deploy ARM Template](#exercise-1-deploy-arm-template)
 
-- [Step 1: Create an Azure Resource Group](#step-1-create-an-azure-resource-group)
+- [Step 1: Deploy the ARM template](#step-2-deploy-the-arm-template)
 
-- [Step 2: Deploy the ARM template](#step-2-deploy-the-arm-template)
+- [Step 2: Grant permissions to the team](#step-3-grant-permissions-to-the-team)
 
-- [Step 3: Grant permissions to the team](#step-3-grant-permissions-to-the-team)
-
-- [Step 4: Cleanup Azure resources (at conclusion of workshop)](#step-4-cleanup-azure-resources-at-conclusion-of-workshop)
+- [Step 3: Cleanup Azure resources (at conclusion of workshop)](#step-4-cleanup-azure-resources-at-conclusion-of-workshop)
 
 [Summary](#summary)
 
@@ -58,43 +56,8 @@ In this section you will deploy the necessary Azure services into your
 Azure subscription using a parameterized Azure Resource Manager (ARM)
 template.
 
-## Step 1: Create an Azure Resource Group
 
-Note, you may need your Azure administrator to do this step for you if
-you do not have Owner permissions on an Azure subscription.
-
-Log into the [Azure Portal](https://portal.azure.com/) using your Azure
-credentials. You should sign in with the organizational account and your
-Azure subscription you will use for this deployment should be in the
-same tenant as your Dynamics 365 Customer Insights environment.
-
-1. On the Azure Portal home screen, select the **+ Create a
-    resource** tile.
-
-    ![](images/lab02/media/image3.png)
-
-1.  In the **Search the Marketplace** text box, type **Resource group** and
-    press the **Enter** key.
-
-    ![](images/lab02/media/image4.png)
-
-1.  Select the **Create** button on the **Resource group** overview
-    page.
-
-    - On the **Create a resource group** screen, select your desired
-    Subscription and Region. Be sure to choose a [region which supports](https://azure.microsoft.com/en-us/global-infrastructure/services/?products=synapse-analytics,machine-learning-service,storage,monitor) Azure Synapse Analytics workspaces, Azure Data Lake Storage, Azure Machine Learning, and Application Insights. For Resource group,
-    
-    - enter **customer-insights-workshop-rg**, then select the **Review +Create** button.
-
-    ![](images/lab02/media/image5.png)
-
-1.  Select the **Create** button once validation has passed.
-
-    In the top right, you will get a notification popup (or you can click
-    the bell icon to see all notifications) once the resource group is
-    created. Click “Go to resource group”
-
-## Step 2: Deploy the ARM template
+## Step 1: Deploy the ARM template
 
 1.  Go to the Access control (IAM) left nav of the resource group you
     created in the previous step. Click the “View my access” button. Ensure
@@ -190,7 +153,7 @@ same tenant as your Dynamics 365 Customer Insights environment.
         The Serverless SQL pool is part of this workspace. You can use
         Synapse Studio to interact with this workspace.
 
-## Step 3: Grant permissions to the team
+## Step 2: Grant permissions to the team
 
 Any other developers on the team who will need to create and monitor
 this solution should be given permissions to it. The user who will setup
@@ -242,7 +205,7 @@ if you don’t have an appropriate group handy.
 
     ![](images/lab02/media/image15.png)
 
-## Step 4: Cleanup Azure resources (at conclusion of workshop)
+## Step 3: Cleanup Azure resources (at conclusion of workshop)
 
 When you are **COMPLETELY DONE** with all your work in **all the other
 labs**, you can optionally delete these Azure resources. Go to the
