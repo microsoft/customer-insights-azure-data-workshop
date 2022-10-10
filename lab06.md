@@ -76,7 +76,7 @@ flows to accomplish this.
 Go to <https://portal.azure.com> and sign in with your organizational
 account.
 
-In the search box at the top of the portal, search for “asaworkspace”
+In the search box at the top of the portal, search for **asaworkspace**
 and click on the Synapse workspace (not the SQL Server) which appears
 under the Resources section.
 
@@ -89,29 +89,29 @@ web URL link to open Synapse Studio.
 
 1.  Right click on this
     [CustomerChargesDetail.csv](https://raw.githubusercontent.com/ArtisConsulting/customer-insights-azure-data-workshop/main/SampleData/CustomerChargesDetail.csv)
-    link and choose “Save link as…” and name the file
+    link and choose **Save link as…** and name the file
     **CustomerChargesDetail.csv** (not CustomerChargesDetail.txt) on your workstation. We will now upload this
     file to Azure Data Lake Storage Gen2 (ADLS).
 
 1.  Click on the Data pane on the left. It is the
     ![](images/lab06/media/image4.png)
-    icon. Then go to the Linked tab. Expand Azure Data Lake Storage Gen2 and
+    icon. Then go to the Linked tab. Expand **Azure Data Lake Storage Gen2** and
     click on the default storage account (asaworkspace\<suffix>) and click
-    on the staging container.
+    on the **staging** container.
 
     ![](images/lab06/media/image5.png)
 
-1.  Click the “+ New folder” button and create a new folder called
+1.  Click the **+ New folder** button and create a new folder called
     **ChargesDetail**.
 
     ![](images/lab06/media/image6.png)
 
-1.  Double click the new ChargesDetail folder. Then click the Upload button:
+1.  Double click the new **ChargesDetail** folder. Then click the **Upload** button:
 
     ![](images/lab06/media/image7.png)
 
 1.  Choose the CustomerChargesDetail.csv file you previously downloaded and
-    click Upload.
+    click **Upload**.
 
     ![](images/lab06/media/image8.png)
 
@@ -127,11 +127,11 @@ flow into the CustomerCharges.csv file we use in other labs. Mapping
 data flows are a visually-designed data transformations. A mapping data
 flow is executed under the covers on highly scalable Spark compute.
 
-1.  Go to the Integrate tab (the pipeline icon) in Synapse Studio:
+1.  Go to the **Integrate** tab (the pipeline icon) in Synapse Studio:
 
     ![](images/lab06/media/image9.png)
 
-1.  Click the + sign and choose Pipeline to create a new Synapse pipeline.
+1.  Click the **+** sign and choose **Pipeline** to create a new Synapse pipeline.
 
     ![](images/lab06/media/image10.png)
 
@@ -140,7 +140,7 @@ flow is executed under the covers on highly scalable Spark compute.
 
     ![](images/lab06/media/image11.png)
 
-1.  In the Activities pane search for “data flow” and drag the
+1.  In the Activities pane search for **data flow** and drag the
     **Data flow** module onto the canvas.
 
     ![](images/lab06/media/image12.png)
@@ -150,17 +150,17 @@ flow is executed under the covers on highly scalable Spark compute.
 
     ![](images/lab06/media/image13.png)
 
-1.  On the Settings tab, click the +New button to create a new Mapping data
+1.  On the Settings tab, click the **+New** button to create a new Mapping data
     flow:
 
     ![](images/lab06/media/image14.png)
 
-1.  In the properties pane rename to “dfRefreshCustomerCharges” (“df” stands
+1.  In the properties pane rename to **dfRefreshCustomerCharges** (“df” stands
     for data flow):
 
     ![](images/lab06/media/image15.png)
 
-1.  Click the “Add source” box:
+1.  Click the **Add source** box:
 
     ![](images/lab06/media/image16.png)
 
@@ -173,21 +173,21 @@ flow is executed under the covers on highly scalable Spark compute.
 
     ![](images/lab06/media/image17.png)
 
-1.  On the “Source options” tab click the Browse button on the File path:
+1.  On the **Source options** tab click the Browse button on the File path:
 
     ![](images/lab06/media/image18.png)
 
-1.  Browse to staging/ChargesDetail and select CustomerChargesDetail.csv and
-    click OK:
+1.  Browse to **staging/ChargesDetail** and select **CustomerChargesDetail.csv** and
+    click **OK**:
 
     ![](images/lab06/media/image19.png)
 
-1.  Check the “first row as header” checkbox:
+1.  Check the **first row as header** checkbox:
 
     ![](images/lab06/media/image20.png)
 
-1.  On the Projection tab, notice the “Import schema” button is grayed out.
-    Click the “Data flow debug” toggle at the top of the mapping data flow
+1.  On the Projection tab, notice the **Import schema** button is grayed out.
+    Click the **Data flow debug** toggle at the top of the mapping data flow
     in order to spin up debug compute to assist in developing and debugging
     this mapping data flow.
 
@@ -209,8 +209,8 @@ flow is executed under the covers on highly scalable Spark compute.
 
     ![](images/lab06/media/image24.png)
 
-1.  Click the Import schema button (which was grayed out in step 13) now. Accepting the default formats is
-    adequate for our file. Click the Import button at the bottom to accept the defaults:
+1.  Click the **Import schema** button (which was grayed out in step 13) now. Accepting the default formats is
+    adequate for our file. Click the **Import** button at the bottom to accept the defaults:
 
     ![](images/lab06/media/image25.png)
 
@@ -229,32 +229,32 @@ flow is executed under the covers on highly scalable Spark compute.
     services together into a single total charge per customer per
     ChargeDate.
 
-    Click the + sign next to the CustomerChargesDetail source and choose
-    Derived Column
+    Click the **+** sign next to the CustomerChargesDetail source and choose
+    **Derived Column**
 
     ![](images/lab06/media/image28.png)
 
 1.  Describe what you are doing in the Output stream name, set the column
-    name to TotalCharges, and set the expression to Charge + Tax (you can
+    name to **TotalCharges**, and set the expression to **Charge + Tax** (you can
     click the “Open expression builder” button for help with building more
     complex expressions.
 
     ![](images/lab06/media/image29.png)
     
-1.  Click the + sign next to the SumChargesAndTax transform and add
-    Aggregate:
+1.  Click the **+** sign next to the SumChargesAndTax transform and add
+    **Aggregate**:
 
     ![](images/lab06/media/image30.png)
 
-1.  Name the output stream AggregateByCustomerMonth (there is only one
-    ChargeDate per month in the file), add customerID and ChargeDate
-    (clicking the + sign next to customerID to add the second column to the
+1.  Name the output stream **AggregateByCustomerMonth** (there is only one
+    ChargeDate per month in the file), add **customerID** and **ChargeDate**
+    (clicking the + sign next to customerID) to add the second column to the
     Group by section:
 
     ![](images/lab06/media/image31.png)
 
 1.  Then click the **Aggregates** selector and add a TotalCharges column with
-    expression sum(TotalCharges) which will aggregate the TotalCharges
+    expression **sum(TotalCharges)** which will aggregate the TotalCharges
     derived column to the per customer/ChargeDate grain.
 
     ![](images/lab06/media/image32.png)
@@ -281,19 +281,19 @@ flow is executed under the covers on highly scalable Spark compute.
 
     ![](images/lab06/media/image36.png)
 
-1.  Now let’s write out the results. Click the + icon next to the Select1
-    module and search for “sink” and choose Sink:
+1.  Now let’s write out the results. Click the **+** icon next to the **Select1**
+    module and search for **sink** and choose Sink:
 
     ![](images/lab06/media/image37.png)
 
-1.  Name the output stream CustomerCharges, choose an Inline sink type,
-    choose a DelimitedText dataset type, choose the
-    “asaworkspace\<suffix>-WorkspaceDefaultStorage” linked service:
+1.  Name the output stream **CustomerCharges**, choose an **Inline** sink type,
+    choose a **DelimitedText** dataset type, choose the
+    **asaworkspace\<suffix>-WorkspaceDefaultStorage** linked service:
 
     ![](images/lab06/media/image38.png)
 
-1.  Choose the staging container and the Charges folder. Check the “first
-    row as header” checkbox and the “Clear the folder” checkbox:
+1.  Choose the staging container and the Charges folder. Check the **first
+    row as header** checkbox and the **Clear the folder** checkbox:
 
     ![](images/lab06/media/image39.png)
 
@@ -308,7 +308,7 @@ flow is executed under the covers on highly scalable Spark compute.
     ![](images/lab06/media/image40.png)
 
 1.  Flip back to the RefreshCustomerCharges pipeline tab, click the Debug
-    dropdown and choose “Use data flow debug session”:
+    dropdown and choose **Use data flow debug session**:
 
     ![](images/lab06/media/image41.png)
 
@@ -319,7 +319,7 @@ flow is executed under the covers on highly scalable Spark compute.
 
     ![](images/lab06/media/image42.png)
 
-1.  Click the Publish all button to save the pipeline and mapping data flow
+1.  Click the **Publish all** button to save the pipeline and mapping data flow
     and make them available to schedule or for other users to see.
 
     ![](images/lab06/media/image43.png)
@@ -354,11 +354,11 @@ second option in this lab.
 
     ![](images/lab06/media/image46.png)
 
-1.  Click on the ML module and rename it Execute Churn ML Pipeline:
+1.  Click on the ML module and rename it **Execute Churn ML Pipeline**:
 
     ![](images/lab06/media/image47.png)
 
-1.  On the Settings tab for the ML module, click the new button to create a
+1.  On the Settings tab for the ML module, click the **new** button to create a
     new Azure ML linked service:
 
     ![](images/lab06/media/image48.png)
@@ -371,12 +371,12 @@ second option in this lab.
 
     ![](images/lab06/media/image49.png)
 
-1.  Click “Test connection” and you should see a “Connection successful”
+1.  Click **Test connection** and you should see a **Connection successful**
     message. Click Create.
 
     ![](images/lab06/media/image50.png)
 
-1.  Change the Pipeline ID type to “Pipeline endpoint ID”, choose the
+1.  Change the Pipeline ID type to **Pipeline endpoint ID**, choose the
     CustomerChurnEP endpoint, choose the pipeline version you want (possibly
     version 0), and set the Experiment name to SynapseAutomatedChurn:
 
@@ -392,7 +392,7 @@ second option in this lab.
 
     ![](images/lab06/media/image52.png)
 
-1.  Click Publish all:
+1.  Click **Publish all**:
 
     ![](images/lab06/media/image53.png)
     
@@ -402,12 +402,12 @@ second option in this lab.
 
 ## Step 2: Schedule the Synapse pipeline
 
-1.  Click the Add trigger button at the top of the
-    RefreshCustomerChargesAndChurnML Synapse pipeline and choose New/Edit:
+1.  Click the **Add trigger** button at the top of the
+    RefreshCustomerChargesAndChurnML Synapse pipeline and choose **New/Edit**:
 
     ![](images/lab06/media/image55.png)
 
-1.  On the Add triggers pane, choose +New from the dropdown:
+1.  On the Add triggers pane, choose **+New** from the dropdown:
 
     ![](images/lab06/media/image56.png)
 
@@ -417,8 +417,8 @@ second option in this lab.
 
     ![](images/lab06/media/image57.png)
 
-1.  Click Publish all and confirm the trigger to be published. Click
-    Publish.
+1.  Click **Publish all** and confirm the trigger to be published. Click
+    **Publish**.
 
     ![](images/lab06/media/image58.png)
 
@@ -437,22 +437,13 @@ second option in this lab.
 
     ![](images/lab06/media/image60.png)
 
-1.  Choose “Refresh automatically” and set it to refresh on specific days
+1.  Choose **Refresh automatically** and set it to refresh on specific days
     and times, choose Daily, and choose a time which is 30 minutes after the
     Synapse pipeline is scheduled to run. Pay attention to the time zone.
     Click Create.
 
     ![](images/lab06/media/image61.png)
 
-# Exercise 3: Cleanup Azure resources (optional)
-
-When you are **COMPLETELY DONE** with all your work, you can optionally
-delete these Azure resources. Go to the Overview blade of the
-**customer-insights-workshop-rg** in the Azure portal and click the
-**Delete resource group** button. Your Azure resources and all the data
-in them will be **deleted and unrecoverable**.
-
-![](images/lab06/media/image62.png)
 
 # Summary
 
