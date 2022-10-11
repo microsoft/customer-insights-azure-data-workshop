@@ -165,7 +165,6 @@ and wish take advantage of a trial environment, visit
 
     ![](images/lab01/media/image15.png)
 
-
 1.  On the Transform tab click **User first row as headers**:
 
     ![](images/lab01/media/image16.png)
@@ -231,9 +230,9 @@ is a prerequisite for later steps and labs.
     the PhoneService column as this column indicates whether this telco
     customer has phone service or not. Dropdown the Type dropdown next to
     PhoneService and choose the blank value to blank out the Type on this
-    column. Then click the Save button at the top of the page.
+    column. Then click the **Save** button at the top of the page and click on **Next**.
 
-    ![](images/lab01/media/image26.png)
+    ![](images/lab01/media/lab1-unify1.png)
 
 
 ## Step 2: Match your customer entities on customerID
@@ -252,19 +251,18 @@ is a prerequisite for later steps and labs.
 
     ![](images/lab01/media/image30.png)
 
-1.  Click the **Save** button at the top and then click the **Run** button
-    at the top.
+1.  Click the **Save and close** button at the bottom.
 
-    ![](images/lab01/media/image31.png)
+    ![](images/lab01/media/lab1-unify2.png)
 
-1.  Wait while the matching runs. It takes approximately 5 minutes.
+1.  Click on **Run matching conditions only** and wait while the matching runs. It takes approximately 5 minutes.
 
-    ![](images/lab01/media/image32.png)
+    ![](images/lab01/media/lab1-unify3.png)
 
 1.  When the matching is complete, validate that you have the proper matched
     record counts:
 
-    ![](images/lab01/media/image33.png)
+    ![](images/lab01/media/lab1-unify4.png)
 
 1.  If your own datasets contain duplication of data, then explore the [deduplication](https://docs.microsoft.com/en-us/dynamics365/customer-insights/audience-insights/match-entities#add-deduplication-rules) features of Dynamics 365 Customer Insights.
 
@@ -272,14 +270,14 @@ is a prerequisite for later steps and labs.
 
 1.  On the Merge tab, you have the opportunity to combine, ignore or rename
     any fields. For the sample dataset, nothing needs to be done
-    except click **Save** and click **Run… Run only Merge**.
+    except click **Unify customer profiles**.
 
-    ![](images/lab01/media/image34.png)
+    ![](images/lab01/media/lab1-unify5.png)
 
 1.  When merging is complete the screen will update with the current matched
     records count:
 
-    ![](images/lab01/media/image35.png)
+    ![](images/lab01/media/lab1-unify6.png)
 
 # Exercise 3: Enrich customer entities
 
@@ -288,31 +286,31 @@ In this section you will enrich your customer entities in your Dynamics
 
 ## Step 1: Enrich with Interest affinities
 
-1.  On the Enrichment left nav click “Enrich my data” on the “Interests”
+1.  On the Enrichment left nav click **Enrich my data** on the **Interests**
     tile to enrich your data with interest affinities from people in a
     similar demographic to your customers.
 
     ![](images/lab01/media/image36.png)
 
-1.  On the overview tab, click Next
+1.  On the overview tab, click **Next**
 
     ![](images/lab01/media/image37.png)
 
-1.  On the Interests tab choose “Internet & Telecom” from the dropdown (or
+1.  On the Interests tab choose **Internet & Telecom** from the dropdown (or
     whatever industry makes sense for your business).
 
     ![](images/lab01/media/image38.png)
 
-1.  Click the + icon next to Search Engines, Internet Service Plans,
-    Teleconferencing, and Cable Services, then click Next.
+1.  Click the **+** icon next to Search Engines, Internet Service Plans,
+    Teleconferencing, and Cable Services, then click **Next**.
 
     ![](images/lab01/media/image39.png)
 
-1.  On the Preferences tab, review the settings and click Next.
+1.  On the Preferences tab, review the settings and click **Next**.
 
     ![](images/lab01/media/image40.png)
 
-1.  On the Required data tab choose the Customer dataset and click Next:
+1.  On the Required data tab choose the **Customer** dataset and click **Next**:
 
     ![](images/lab01/media/image41.png)
 
@@ -325,12 +323,12 @@ In this section you will enrich your customer entities in your Dynamics
 
     ![](images/lab01/media/image42.png)
 
-1.  On the Review and run tab, review the settings, name your enrichment _MicrosoftInterestAffinityEnrichment_ and
+1.  On the Review and run tab, review the settings, name your enrichment **MicrosoftInterestAffinityEnrichment** and
     click “**Save enrichment**”.
 
     ![](images/lab01/media/image43.png)
 
-1.  Then click Run:
+1.  Then click **Run**:
 
     ![](images/lab01/media/image44.png)
     
