@@ -214,12 +214,12 @@ query those datasets.
 
      ![](images/lab03/media/image20.png)
 
-1.  Ensure the “Connect to” dropdown has “Built-in” (meaning the Synapse
+1.  Ensure the “Connect to” dropdown has **Built-in** (meaning the Synapse
     Serverless SQL pool) selected then click Run. This OPENROWSET query will
     read from the CustomerCharges.csv file in ADLS. Notice that the header
     row is treated like a row of data.
 
-    ![](images/lab03/media/image21.png)
+    ![](images/lab03/media/lab3-synapse1.png)
 
 1.  To fix the header row, paste in the following query and fix \<suffix>
     then run the query: 
