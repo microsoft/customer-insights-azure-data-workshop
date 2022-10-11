@@ -80,7 +80,7 @@ query those datasets.
 
     ![](images/lab03/media/image4.png)
 
-1.  Choose Azure Synapse Analytics from the dropdown. Note that the Azure
+1.  Choose **Azure Synapse Analytics** from the dropdown. Note that the Azure
     Data Lake Store Gen 2 connection just exports files to your Azure Data
     Lake Store (ADLS) account. Azure Synapse Analytics exports to your ADLS
     account and also creates a view called an “external table” in a Azure
@@ -131,7 +131,7 @@ query those datasets.
 1.  Go to <https://portal.azure.com> and sign in with your organizational
     account.
 
-    In the search box at the top of the portal, search for “asaworkspace”
+    In the search box at the top of the portal, search for **asaworkspace**
     and click on the Synapse workspace (not the SQL Server) which appears
     under the Resources section.
 
@@ -148,7 +148,7 @@ query those datasets.
 
     ![](images/lab03/media/image14.png)
 
-1.  Ensure the “Connect to” dropdown has “Built-in” (meaning the Synapse
+1.  Ensure the “Connect to” dropdown has **Built-in** (meaning the Synapse
     Serverless SQL pool) selected. Then click the Run button in the SQL
     script 1 tab to view some rows in your exported Customer data.
 
@@ -196,11 +196,11 @@ query those datasets.
 
      ![](images/lab03/media/image16.png)
 
-1.  Click the **+ New folder** button and create a new folder called Charges.
+1.  Click the **+ New folder** button and create a new folder called **Charges**.
 
      ![](images/lab03/media/image17.png)
 
-1.  Double click the new Charges folder. Then click the Upload button:
+1.  Double click the new Charges folder. Then click the **Upload** button:
 
      ![](images/lab03/media/image18.png)
 
@@ -226,19 +226,19 @@ query those datasets.
 
     ```sql
     SELECT
-    TOP 100 *
+    TOP 100 *
     FROM
     OPENROWSET(
       BULK 'https://asadatalake<suffix>.dfs.core.windows.net/staging/Charges/',
       FORMAT = 'CSV',
       PARSER_VERSION='2.0',
-      HEADER_ROW = TRUE
-      )
-    WITH (
-      customerID VARCHAR(20),
-      Charge decimal(20,2),
-      ChargeDate date
-      ) c
+      HEADER_ROW = TRUE
+      )
+    WITH (
+      customerID VARCHAR(20),
+      Charge decimal(20,2),
+      ChargeDate date
+      ) c
     ```
 
 
@@ -260,22 +260,21 @@ query those datasets.
 
 
     ```sql
-    CREATE DATABASE CI
-        COLLATE Latin1_General_100_BIN2_UTF8;
+    CREATE DATABASE CI
+        COLLATE Latin1_General_100_BIN2_UTF8;
 
     GO
 
-    USE CI;
+    USE CI;
 
     GO
 
-    CREATE VIEW dbo.CustomerChurnCharges
+    CREATE VIEW dbo.CustomerChurnCharges
     AS
-    SELECT *
+    SELECT *
     <remainder of the prior query here> 
     ```
    
-
 1. Highlight all statements and click the Run button.
     
      ![](images/lab03/media/image23.png)
