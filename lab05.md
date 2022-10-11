@@ -60,10 +60,10 @@ learning models into Customer Insights.
 
     ![](images/lab05/media/image3.png)
 
-1.  On the Security + networking… Access keys blade, click the **Show keys**
+1.  On the Security + networking… Access keys blade, click the **Show** button.
     button:
 
-    ![](images/lab05/media/image4.png)
+    ![](images/lab05/media/asadatalake1.png)
 
 1.  Click the Copy to clipboard button on the right side of the Key textbox
     under the key1 section:
