@@ -59,8 +59,7 @@ template.
 
 ## Step 1: Deploy the ARM template
 
-1.  Go to the Access control (IAM) left nav of the resource group you
-    created in the previous step. Click the “View my access” button. Ensure
+1.  Go to the Access control (IAM) left nav of the resource group **customer-insights-workshop-rg**. Click the “View my access” button. Ensure
     that you are assigned the Owner role for this resource group (or the
     Owner role is inherited from the subscription or management group). If
     you are not an Owner, then ask your Azure administrator to make you an
@@ -77,8 +76,7 @@ template.
     <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FArtisConsulting%2Fcustomer-insights-azure-data-workshop%2Fmain%2FAzureSetup%2FArmTemplate.json" target="_blank">![](images/lab02/media/image7.png)</a>
 
 1.  On the Custom deployment form fill in the choose the right Azure
-    subscription and choose the **customer-insights-workshop-rg** resource group
-    you just created.
+    subscription and choose the **customer-insights-workshop-rg** resource group.
 
     Then fill in the following “Instance details”:
 
@@ -171,7 +169,7 @@ if you don’t have an appropriate group handy.
     ![](images/lab02/media/image10.png)
 
 1.  One at a time, grant each developer the Contributor role by choosing
-    Role=Contributor and searching for their name, selecting their name, and
+    role **Contributor** and searching for their name, selecting their name, and
     clicking Save.
 
     ![](images/lab02/media/image11.png)
@@ -179,8 +177,8 @@ if you don’t have an appropriate group handy.
 1.  Repeat the process for the Storage Blob Data Contributor role. One at a
     time, grant each developer the role by choosing Role=Storage Blob Data
     Contributor and searching for their name, selecting their name, and
-    clicking Save. Be sure to assign **yourself** “Storage Blob Data
-    Contributor” role, too!
+    clicking Save. Be sure to assign yourself **Storage Blob Data
+    Contributor** role, too!
 
     ![](images/lab02/media/image12.png)
 
@@ -194,26 +192,10 @@ if you don’t have an appropriate group handy.
 1.  On the Overview blade and the Essentials section, click the Workspace
     web URL link to open Synapse Studio.
 
-    Go to the Manage left nav and the Access control left nav. Click the Add
-    button to add a role:
+    Go to the Manage left nav and the Access control left nav. Make sure that user is assigned with **Synapse Administrator** role.
 
-    ![](images/lab02/media/image14.png)
+    ![](images/lab02/media/lab2-synapse.png)
 
-1.  Choose Scope of Workspace, choose Role as Synapse Administrator, then
-    type in the names of the teammates you wish to allow to access. Then
-    click Apply.
-
-    ![](images/lab02/media/image15.png)
-
-## Step 3: Cleanup Azure resources (at conclusion of workshop)
-
-When you are **COMPLETELY DONE** with all your work in **all the other
-labs**, you can optionally delete these Azure resources. Go to the
-Overview blade of the **customer-insights-workshop-rg** and click the
-**Delete resource group** button. Your Azure resources and all the data
-in them will be deleted and unrecoverable.
-
-![](images/lab02/media/image16.png)
 
 # Summary
 
