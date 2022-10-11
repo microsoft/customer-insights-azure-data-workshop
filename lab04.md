@@ -96,47 +96,54 @@ In this step, you connect to Azure Synapse Serverless SQL using the
 Azure SQL database datastore type and perform a query to extract the
 data.
 
-1.  To connect to the data. Click the **Datastores** option on the left
+1. In the Azure portal, type **Storage account** in the search box and then select it from the suggestions.
+
+   ![](images/lab04/media/storage01.png)
+   
+2. Select the storage account with the name **asadatalake<suffix>**, that falls under **customer-insights-workshop-rg** resource group.
+    
+   ![](images/lab04/media/storage02.png)
+    
+3. Switch to the **Access keys** blade, and select **Show keys**. Select the copy button for the first **key**. Paste the value into a text editor, such as     Notepad.exe, for later reference.
+
+    ![](images/lab04/media/storage03.png) 
+    
+4.  To connect to the data. Click the **Datastores** option on the left
     pane.
 
     ![](images/lab04/media/image7.png)
 
-2.  Choose **+ New Datastore**
+5.  Choose **+ New Datastore**
 
     ![](images/lab04/media/image8.png)
 
-3.  Enter the details of the new datastore. Name the Datastore
-    “**telcochurn**” and select “**Azure SQL Database**” as the
-    Datastore type. The server name will be
-    “**asaworkspace\<suffix>-ondemand**”. The Database name is “CI”.
-    Select the proper Subscription ID and Resource Group assigned to
-    your project “**customer-insights-workshop-rg**”. The User ID will be “**asa.sql.admin**”. Enter the
-    password you created in lab 2. Select “No” on using the workspace
-    managed identity for data preview. Once done, click “**Create**” at
-    the bottom. 
+6.  Enter the details of the new datastore. Provide the following details:
     
+    - Datastore Name: **telcochurn**
+    - Datastore type: **Azure Blob storage**
+    - Select the proper Subscription ID
+    - Storage account: **asadatalake<suffix>**
+    - Blob container: **Stage**
+    - Authentication type: **Account key**
+    - Account Key: **Storage account key you copied in the starting of the task**
     
-  > *Note: Even though the documented connection string for Synapse Serverless SQL is asaworkspace\<suffix>-ondemand.**sql.azuresynapse.net**, asaworkspace\<suffix>-ondemand.**database.windows.net** also works.*
+   ![](images/lab04/media/lab4-ML3.png)
 
-    
-   ![](images/lab04/media/image9.png)
-
-4.  Upon creation, “telcochurn” will appear in the datastore
+7.  Upon creation, **telcochurn** will appear in the datastore
     selection, click on it to create a new dataset.
 
     ![](images/lab04/media/image10.png)
 
-5.  Select **Create Dataset** from the Overview screen
+8.  Select **Create Dataset** from the Overview screen
 
     ![](images/lab04/media/image11.png)
 
-6.  Give the dataset the name **TelcoChurn** and select Dataset Type
+9.  Give the dataset the name **TelcoChurn** and select Dataset Type
     as **Tabular**. Click **Next**.
 
     ![](images/lab04/media/image12.png)
 
-7.  Enter the following SQL Query into the space provided:
-    **select \* from dbo.CustomerChurn**. Leave Skip Data Validation
+10.  Click on **Browse** and select the **Charges** folder. Leave Skip Data Validation
     **UNCHECKED** then click Next. This will connect to the data and
     pop up with a data preview screen. After the preview has loaded,
     click **Next**. *Note: we could’ve also created the Datastore on
@@ -144,20 +151,20 @@ data.
 
     ![](images/lab04/media/image13.png)
 
-8.  The next options are to set the Schema. Here we can set the data
+11.  The next options are to set the Schema. Here we can set the data
     types of each column. Azure ML will automatically detect what it
     perceives the data type to be. We can accept the defaults and
     click **Next**.
 
     ![](images/lab04/media/image14.png)
 
-9.  The final step for creating the dataset is to Confirm the
+12.  The final step for creating the dataset is to Confirm the
     details. Review the screen and click **Create** at the bottom of
     the page.
 
     ![](images/lab04/media/image15.png)
 
-10.  Once complete, there will be a success notification.
+13.  Once complete, there will be a success notification.
 
      ![](images/lab04/media/image16.png)
 
@@ -278,13 +285,13 @@ designing the experiment.
      
      ![](images/lab04/media/imageSelectAll.png)
 
-    Remove the customerID column by clicking the minus sign next to it. If we were to leave the ID in, the
+    Remove the **customerID** column by clicking the minus sign next to it. If we were to leave the ID in, the
     models would treat that as a feature which would cause errors down
     the line.
      
      ![](images/lab04/media/imageRemoveCustomerID.png)
 
-    Your screen should look like this. Click Save.
+    Your screen should look like this. Click **Save**.
     
     ![](images/lab04/media/imageSelectColumns.png)
 
@@ -305,7 +312,7 @@ designing the experiment.
     
 16. We’re going to create two models. The first one is a Two-Class
     Boosted Decision Tree with the following parameters. Search for and
-    drag Two-Class Boosted Decision Tree from the module selection over
+    drag **Two-Class Boosted Decision Tree** from the module selection over
     to the page. *Yours will not turn green until after we have
     successfully run the pipeline*
 
@@ -313,7 +320,7 @@ designing the experiment.
     
     ![](images/lab04/media/image36.png)
 
-17. The second is a Two-Class Decision Forest with the following
+17. The second is a **Two-Class Decision Forest** with the following
     parameters. Drag this on to the page.
 
     ![](images/lab04/media/image37.png)
@@ -452,22 +459,13 @@ storage for the next labs.
 11. If you would like to view the data, you can select the **Edit**
     button to preview it.
 
-12. Refer back to the **Clean Missing Data** module. In the Output
-    Settings Option, we are going to select **Regenerate Output.** This
-    will ensure that every time we execute the pipeline, we are
-    re-executing the SQL query to pull the latest data and handling the
-    missing values appropriately and not using cached results from a
-    previous execution.
-
-    ![](images/lab04/media/image56.png)
-
-13. The final step is to **Publish** the pipeline. Click the **Publish**
+12. The final step is to **Publish** the pipeline. Click the **Publish**
     button in the top right next to the Submit button. Select **Create
     New** and call it **CustomerChurnEP**. Click **Publish**.
 
     ![](images/lab04/media/image57.png)
 
-14. Click on the **Pipelines** tab to see the newly published pipeline.
+13. Click on the **Pipelines** tab to see the newly published pipeline.
 
     ![](images/lab04/media/image58.png)
 
