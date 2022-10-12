@@ -1,0 +1,40 @@
+[
+    {
+      "Name": "Customer-insights-azure-data-workshop",
+      "Language": "English",
+      "Files": [
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/customer-insights-azure-data-workshop/main/GettingStarted.md",
+          "Order": 1
+        },
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/customer-insights-azure-data-workshop/main/README.md",
+          "Order": 2
+        },
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/customer-insights-azure-data-workshop/main/lab01.md",
+          "Order": 3
+        },
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/customer-insights-azure-data-workshop/main/lab02.md",
+          "Order": 4
+        },
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/customer-insights-azure-data-workshop/main/lab03.md",
+          "Order": 5
+        },
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/customer-insights-azure-data-workshop/main/lab04.md",
+          "Order": 6
+        },
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/customer-insights-azure-data-workshop/main/lab05.md",
+          "Order": 7
+        },
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/customer-insights-azure-data-workshop/main/lab06.md",
+          "Order": 8
+        }
+      ]
+    }
+  ]
