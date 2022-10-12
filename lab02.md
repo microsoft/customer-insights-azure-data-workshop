@@ -73,7 +73,7 @@ template.
 1.  CTRL+click (on Windows) or CMD+click (on MacOS) the **Deploy to Azure** button below which will prompt you to
     enter several parameters before deploying Azure resources:
 
-     <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FArtisConsulting%2Fcustomer-insights-azure-data-workshop%2Fmain%2FAzureSetup%2FArmTemplate.json" target="_blank">![Button to deploy the SmartHotelHost template to Azure.](images/lab02/media/image7.png "Deploy the SmartHotelHost template to Azure")</a>
+     [![Button to deploy the resource template to Azure.](https://aka.ms/deploytoazurebutton "Deploy the Contoso HA resources to Azure")](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FArtisConsulting%2Fcustomer-insights-azure-data-workshop%2Fmain%2FAzureSetup%2FArmTemplate.json)
 
 1.  On the Custom deployment form fill in the choose the right Azure
     subscription and choose the **customer-insights-workshop-rg** resource group.
