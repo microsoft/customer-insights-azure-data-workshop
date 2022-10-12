@@ -182,8 +182,7 @@ if you don’t have an appropriate group handy.
 
     ![](images/lab02/media/image12.png)
 
-1.  Next, you need to grant each developer Synapse Administrator role from
-    within Synapse Studio. In the search box at the top of the portal,
+1.  In the search box at the top of the Azure portal,
     search for “asaworkspace” and click on the Synapse workspace (not the
     SQL Server) which appears under the Resources section.
 
