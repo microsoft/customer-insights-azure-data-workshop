@@ -149,20 +149,20 @@ data.
     click **Next**. *Note: we could’ve also created the Datastore on
     this screen.*
 
-    ![](images/lab04/media/image13.png)
+     ![](images/lab04/media/image13.png)
 
 11.  The next options are to set the Schema. Here we can set the data
     types of each column. Azure ML will automatically detect what it
     perceives the data type to be. We can accept the defaults and
     click **Next**.
 
-    ![](images/lab04/media/image14.png)
+     ![](images/lab04/media/image14.png)
 
 12.  The final step for creating the dataset is to Confirm the
     details. Review the screen and click **Create** at the bottom of
     the page.
 
-    ![](images/lab04/media/image15.png)
+     ![](images/lab04/media/image15.png)
 
 13.  Once complete, there will be a success notification.
 
