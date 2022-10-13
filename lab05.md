@@ -88,9 +88,9 @@ learning models into Customer Insights.
     ![](images/lab05/media/image8.png)
 
 1.  In the **Account name or URL** type in the name of your storage account
-    for Azure ML (asastore\<suffix>) replacing your suffix. Change the
+    for Azure ML (**asastore<inject key="Deployment ID" enableCopy="false" />**). Change the
     Authentication kind to **Account key**. Paste in the storage account key for
-    your asastore\<suffix> storage account. Click Next.
+    your **asastore<inject key="Deployment ID" enableCopy="false" />** storage account. Click Next.
 
     ![](images/lab05/media/image9.png)
 
