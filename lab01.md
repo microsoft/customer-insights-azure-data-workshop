@@ -91,10 +91,6 @@ already loaded, unified and enriched appropriately.
 Browse to <https://home.ci.ai.dynamics.com/> and sign in with your
 organizational account.
 
-If you don’t have a Customer Insights environment provisioned already
-and wish take advantage of a trial environment, visit
-<https://aka.ms/tryci>
-
 ## Step 2: Load CustomerDemographics sample dataset to Customer Insights
 
 1.  Go to the Data… Data sources tab and click **Add data source**
