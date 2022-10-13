@@ -96,7 +96,7 @@ web URL link to open Synapse Studio.
 1.  Click on the Data pane on the left. It is the
     ![](images/lab06/media/image4.png)
     icon. Then go to the Linked tab. Expand **Azure Data Lake Storage Gen2** and
-    click on the default storage account (asaworkspace\<suffix>) and click
+    click on the default storage account (**asaworkspace<inject key="Deployment ID" enableCopy="false" />**) and click
     on the **staging** container.
 
     ![](images/lab06/media/image5.png)
@@ -167,7 +167,7 @@ flow is executed under the covers on highly scalable Spark compute.
 1.  In the “Source settings” tab at the bottom name it
     **CustomerChargesDetail**, change to an **inline** source type, choose a
     **DelimitedText** dataset type, and choose the
-    “**asaworkspace\<suffix>-WorkspaceDefaultStorage**” linked service
+    “**asaworkspace<inject key="Deployment ID" enableCopy="false" />-WorkspaceDefaultStorage**” linked service
     (which was created automatically when the Synapse workspace was
     created).
 
@@ -288,7 +288,7 @@ flow is executed under the covers on highly scalable Spark compute.
 
 1.  Name the output stream **CustomerCharges**, choose an **Inline** sink type,
     choose a **DelimitedText** dataset type, choose the
-    **asaworkspace\<suffix>-WorkspaceDefaultStorage** linked service:
+    **asaworkspace<inject key="Deployment ID" enableCopy="false" />-WorkspaceDefaultStorage** linked service:
 
     ![](images/lab06/media/image38.png)
 
@@ -367,7 +367,7 @@ second option in this lab.
     Service), ensure the authentication is the (Synapse) Managed Identity
     (which was granted RBAC Contributor role on the Azure ML workspace in
     the ARM template), then choose the right Azure subscription and the
-    “amlworkspace\<suffix>” Azure ML workspace.
+    “amlworkspace<inject key="Deployment ID" enableCopy="false" />” Azure ML workspace.
 
     ![](images/lab06/media/image49.png)
 
