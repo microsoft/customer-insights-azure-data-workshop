@@ -80,7 +80,7 @@ workspace you will use for creating experiments.
     
     ![](images/lab04/media/image4.png)
 
-2.  Select your **amlworkspace\<suffix>** Azure ML workspace you created
+2.  Select your **amlworkspace<inject key="Deployment ID" enableCopy="false" />** Azure ML workspace you created
     in Lab 2 from the drop-down menu. Click the **Get started** button.
     You will be directed to the Azure ML home screen.
 
@@ -110,7 +110,7 @@ data.
     - Datastore Name: **telcochurn**
     - Datastore type: **Azure SQL Database**
     - Account selection method: **Enter manually**
-    - server name: **asaworkspace(suffix)-ondemand**
+    - server name: **asaworkspace<inject key="Deployment ID" enableCopy="false" />-ondemand**
     - Database name: **CI**
     - Select the proper Subscription ID
     - Resource group: **customer-insights-workshop-rg**
