@@ -90,7 +90,7 @@ query those datasets.
 
 1.  On the **Set up Azure Synapse Analytics connection** pane, type in a name
     for this connection, choose the Azure subscription, Synapse workspace
-    (asaworkspace\<suffix>), Storage account (asadatalake\<suffix>), and
+    (**asaworkspace<inject key="Deployment ID" enableCopy="false" />**), Storage account (**asadatalake<inject key="Deployment ID" enableCopy="false" />**), and
     Container (staging).
 
     _Note: Your user must be an Owner on the customer-insights-workshop-rg resource group for the following to work. If you are not sure you have Owner permissions, go back to Lab 2 [Step 2: Deploy the ARM template](lab02.md#step-2-deploy-the-arm-template) and work through the #1 item to "View my access". RBAC permissions changes can take up to **15 minutes** to propogate._
@@ -156,7 +156,7 @@ query those datasets.
 
 1.  Highlight the current query and press the backspace key to delete the
     query text. Paste the following query into the query window, replace
-    \<suffix> with the suffix for your ADLS account, and click the Run
+    \<suffix> with **<inject key="Deployment ID" />**, and click the Run
     button at the top of the screen.
 
     ```sql
@@ -168,13 +168,13 @@ query those datasets.
     Serverless SQL to use the Synapse workspace managed service identity
     (MSI) to authenticate with ADLS when a SQL user account needs to access
     ADLS without any other credentials specified. (The MSI is named to match
-    the Synapse workspace name asaworkspace\<suffix>.) Note, in Lab 2, the
+    the Synapse workspace name **asaworkspace<inject key="Deployment ID" enableCopy="false" />**.) Note, in Lab 2, the
     ARM template which deployed the Azure services ensured that the MSI had
     the Storage Blob Data Contributor role on the resource group. For
     further information, view the documentation
     [here](https://docs.microsoft.com/en-us/azure/synapse-analytics/sql/develop-storage-files-storage-access-control?tabs=managed-identity#server-scoped-credential).
 
-1.  To validate the Synapse MSI has the proper permissions created by the ARM template, go to the Azure portal, go to the customer-insights-workshop-rg resource group, click the Access control (IAM) tab, and confirm asaworkspace\<suffix> has Storage Blob Data Contributor permissions.
+1.  To validate the Synapse MSI has the proper permissions created by the ARM template, go to the Azure portal, go to the customer-insights-workshop-rg resource group, click the Access control (IAM) tab, and confirm **asaworkspace<inject key="Deployment ID" enableCopy="false" />** has Storage Blob Data Contributor permissions.
 
      ![](images/lab03/media/image24.png)
 
@@ -191,7 +191,7 @@ query those datasets.
     Click on the Data pane on the left. It is the
     ![](images/lab03/media/image13.png)
     icon. Then go to the Linked tab. Expand Azure Data Lake Storage Gen2 and
-    click on the default storage account (asaworkspace\<suffix>) and click
+    click on the default storage account (**asaworkspace<inject key="Deployment ID" enableCopy="false" />**) and click
     on the staging container.
 
      ![](images/lab03/media/image16.png)
