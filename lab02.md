@@ -83,23 +83,9 @@ template.
     -   **Region** – This should default to the region your resource group
         is in and shouldn’t be changed
 
-    -   **Unique Suffix** – This suffix will be added to the name of each of
-        the Azure resources you are about to create. It should be only
-        lowercase letters and numbers and should be 13 characters or fewer.
-        It must be unique (shouldn’t be the same suffix anyone else using
-        this workshop has used) and you will get a validation failure if you
-        don’t choose a unique suffix.
+    -   **Unique Suffix** – Enter **<inject key="Deployment ID" />**
 
-    -   **SQL Administrator Login Password** – This is the password for the
-        Synapse SQL admin login named “asa.sql.admin”. Choose a strong
-        password which is between 8 and 128 characters long and which
-        contains characters from three of the following four categories:
-        (uppercase letters, lowercase letters, digits (0-9),
-        Non-alphanumeric characters such as: !, $, #, or %). Your password
-        cannot contain all or part of the “asa.sql.admin” login name. Part
-        of a login name is defined as three or more consecutive alphanumeric
-        characters. Save this password in your own password vault or note it
-        securely somewhere.
+    -   **SQL Administrator Login Password** – Enter **<inject key="LABVM Admin Password" />**
 
 1.  Review the requirements for the password again carefully. Click the
     **Review + create** button.
@@ -126,28 +112,28 @@ template.
     Once the deployment completes you should have the following
     resources:
 
-    -   **amlworkspace\<suffix>** - An Azure Machine Learning workspace you
+    -   **amlworkspace<inject key="Deployment ID" enableCopy="false" />** - An Azure Machine Learning workspace you
         will use in a later lab to build machine learning models to enrich
         your customer data
 
-    -   **asaappinsights\<suffix>** - The Azure Application Insights which
+    -   **asaappinsights<inject key="Deployment ID" enableCopy="false" />** - The Azure Application Insights which
         is tied to your Azure Machine Learning workspace
 
-    -   **asadatalake\<suffix>** - The Azure Data Lake Store Gen2 storage
+    -   **asadatalake<inject key="Deployment ID" enableCopy="false" />** - The Azure Data Lake Store Gen2 storage
         account which will be the primary storage for Synapse and for export
         from Customer Insights
 
-    -   **asakeyvault\<suffix>** - The Azure Key Vault tied to your Azure
+    -   **asakeyvault<inject key="Deployment ID" enableCopy="false" />** - The Azure Key Vault tied to your Azure
         Machine Learning workspace for storage of secrets
 
-    -   **asastore\<suffix>** - The Azure blob storage account tied to your
+    -   **asastore<inject key="Deployment ID" enableCopy="false" />** - The Azure blob storage account tied to your
         Azure Machine Learning workspace. (Storage accounts with
         hierarchical namespace enabled like the asadatalake storage account
         are not supported by Azure Machine Learning at the time of this
         writing, so a separate blob storage account was created for Azure ML
         internal storage.)
 
-    -   **asaworkspace\<suffix>** - The Azure Synapse Analytics workspace.
+    -   **asaworkspace<inject key="Deployment ID" enableCopy="false" />** - The Azure Synapse Analytics workspace.
         The Serverless SQL pool is part of this workspace. You can use
         Synapse Studio to interact with this workspace.
 
