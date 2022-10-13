@@ -115,7 +115,7 @@ data.
     - Select the proper Subscription ID
     - Resource group: **customer-insights-workshop-rg**
     - User ID: **asa.sql.admin**
-    - Password: **demo!pass123**
+    - Password: **<inject key="LABVM Admin Password" />**
     
      ![](images/lab04/media/image9.png)
 
