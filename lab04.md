@@ -95,55 +95,45 @@ workspace you will use for creating experiments.
 In this step, you connect to Azure Synapse Serverless SQL using the
 Azure SQL database datastore type and perform a query to extract the
 data.
-
-1. In the Azure portal, type **Storage account** in the search box and then select it from the suggestions.
-
-   ![](images/lab04/media/storage01.png)
-   
-2. Select the storage account with the name **asadatalake<suffix>**, that falls under **customer-insights-workshop-rg** resource group.
     
-   ![](images/lab04/media/storage02.png)
-    
-3. Switch to the **Access keys** blade, and select **Show keys**. Select the copy button for the first **key**. Paste the value into a text editor, such as     Notepad.exe, for later reference.
-
-    ![](images/lab04/media/storage03.png) 
-    
-4.  To connect to the data. Click the **Datastores** option on the left
+1.  To connect to the data. Click the **Data** option on the left
     pane.
 
-    ![](images/lab04/media/image7.png)
+    ![](images/lab04/media/datastore1.png)
 
-5.  Choose **+ New Datastore**
+2.  Click on **Datastores** and choose **+ Create**
 
-    ![](images/lab04/media/image8.png)
+    ![](images/lab04/media/datastore2.png)
 
-6.  Enter the details of the new datastore. Provide the following details:
+3.  Enter the details of the new datastore. Provide the following details:
     
     - Datastore Name: **telcochurn**
-    - Datastore type: **Azure Blob storage**
+    - Datastore type: **Azure SQL Database**
+    - Account selection method: **Enter manually**
+    - server name: **asaworkspace(suffix)-ondemand**
+    - Database name: **CI**
     - Select the proper Subscription ID
-    - Storage account: **asadatalake<suffix>**
-    - Blob container: **Stage**
-    - Authentication type: **Account key**
-    - Account Key: **Storage account key you copied in the starting of the task**
+    - Resource group: **customer-insights-workshop-rg**
+    - User ID: **asa.sql.admin**
+    - Password: **demo!pass123**
     
-   ![](images/lab04/media/lab4-ML3.png)
+     ![](images/lab04/media/image9.png)
 
-7.  Upon creation, **telcochurn** will appear in the datastore
+4.  Upon creation, **telcochurn** will appear in the datastore
     selection, click on it to create a new dataset.
 
     ![](images/lab04/media/image10.png)
 
-8.  Select **Create Dataset** from the Overview screen
+5.  Select **Create Dataset** from the Overview screen
 
     ![](images/lab04/media/image11.png)
 
-9.  Give the dataset the name **TelcoChurn** and select Dataset Type
+6.  Give the dataset the name **TelcoChurn** and select Dataset Type
     as **Tabular**. Click **Next**.
 
     ![](images/lab04/media/image12.png)
 
-10.  Click on **Browse** and select the **Charges** folder. Leave Skip Data Validation
+7.  Click on **Browse** and select the **Charges** folder. Leave Skip Data Validation
     **UNCHECKED** then click Next. This will connect to the data and
     pop up with a data preview screen. After the preview has loaded,
     click **Next**. *Note: we could’ve also created the Datastore on
@@ -151,20 +141,20 @@ data.
 
      ![](images/lab04/media/image13.png)
 
-11.  The next options are to set the Schema. Here we can set the data
+8.  The next options are to set the Schema. Here we can set the data
     types of each column. Azure ML will automatically detect what it
     perceives the data type to be. We can accept the defaults and
     click **Next**.
 
      ![](images/lab04/media/image14.png)
 
-12.  The final step for creating the dataset is to Confirm the
+9.  The final step for creating the dataset is to Confirm the
     details. Review the screen and click **Create** at the bottom of
     the page.
 
      ![](images/lab04/media/image15.png)
 
-13.  Once complete, there will be a success notification.
+10.  Once complete, there will be a success notification.
 
      ![](images/lab04/media/image16.png)
 
@@ -175,7 +165,7 @@ designing the experiment.
 
 1.  In the selection pane on the left, select the **Designer** module.
 
-    ![](images/lab04/media/image17.png)
+    ![](images/lab04/media/designer.png)
 
 2.  Select the New Pipeline option **Easy-to-use-prebuilt modules**
 
@@ -256,15 +246,25 @@ designing the experiment.
 
     ![](images/lab04/media/image27.png)
 
-12. In the properties pane for Clean Missing Data. Click "Edit column" and select TotalCharges
+12. In the properties pane for Clean Missing Data. Click "Edit column" and select **TotalCharges**
     as the Column and set the parameters below. *Note: If the goal of
     the lab was to build the best model we would have run some form of
     regression or sub-sample from the complete rows to find a predicted
     value for this.*
 
     ![](images/lab04/media/image28.png)
+    
+13. Under the **Run settings** pane for Clean Missing Data, click on **Edit JSON** 
 
-13. Next, drag **Split** **Data** onto the page. Connect the left node
+    ![](images/lab04/media/clean_missing_data1.png)
+    
+14. On the edit JSON page, enter the following code and click on **Save**
+
+    `{"AZUREML_CR_BOOTSTRAPPER_CONFIG_OVERRIDE":"{\"capabilities_registry\": {\"registry\": {\"url\": \"commonruntimedev.azurecr.io\"}, \"repo_prefix\": \"user/myshylin/data-cap-sql-reading-error-fix\", \"regional_tag_prefix\": false}}"}`
+    
+     ![](images/lab04/media/clean_missing_data2.png)
+
+15. Next, drag **Split** **Data** onto the page. Connect the left node
     of Clean Missing data to the top of Split Data as shown below. Set
     the parameters to match the following settings. To train a machine
     learning model, we need to provide data for the model to train on.
@@ -278,30 +278,24 @@ designing the experiment.
     
     ![](images/lab04/media/image30.png)
 
-14. From the Split Data asset, we are going to connect the left node
+16. From the Split Data asset, we are going to connect the left node
     (training) to 1 new asset and the right node (testing) to 3 new
     assets. The left node is connected to **Select Columns in Dataset**
-    (drag over from the module options). Click "Edit column" to launch the Select columns dialog. In the Select columns options click the "By name" radio button and click "Add all":
-     
-     ![](images/lab04/media/imageSelectAll.png)
-
-    Remove the **customerID** column by clicking the minus sign next to it. If we were to leave the ID in, the
-    models would treat that as a feature which would cause errors down
-    the line.
-     
-     ![](images/lab04/media/imageRemoveCustomerID.png)
-
-    Your screen should look like this. Click **Save**.
+    (drag over from the module options). Click "Edit column" to launch the Select columns dialog. In the Select columns options, select **All columns** option and click on **+** button.
     
-    ![](images/lab04/media/imageSelectColumns.png)
+     ![](images/lab04/media/select_coloumn3.png)
+
+    Remove the "customerID" column selecting **Exclude**, **colum names** and enter the **customerID** as column name. Click **Save**. If we were to leave the ID in,       the models would treat that as a feature which would cause errors down
+    the line. Your screen should look like this.
+     
+     ![](images/lab04/media/select_coloumn4.png)
 
     The selected columns should then be listed here:
 
-    ![](images/lab04/media/image31.png)
+    ![](images/lab04/media/select_coloumn1.png)
     
-    ![](images/lab04/media/image32.png)
 
-15. The right node of the Split Data asset is connected to another
+17. The right node of the Split Data asset is connected to another
     instance of **Select Columns in Dataset**. This extracts the
     Customer ID’s of the testing data. We are going to join this back in
     to the results dataset after the models have run. _Note that the description "Extract customer ID to join back in later" can be added in the Comment section of the properties pane of that module. This is optional._
@@ -310,7 +304,7 @@ designing the experiment.
     
     ![](images/lab04/media/image34.png)
     
-16. We’re going to create two models. The first one is a Two-Class
+18. We’re going to create two models. The first one is a Two-Class
     Boosted Decision Tree with the following parameters. Search for and
     drag **Two-Class Boosted Decision Tree** from the module selection over
     to the page. *Yours will not turn green until after we have
@@ -320,14 +314,14 @@ designing the experiment.
     
     ![](images/lab04/media/image36.png)
 
-17. The second is a **Two-Class Decision Forest** with the following
+19. The second is a **Two-Class Decision Forest** with the following
     parameters. Drag this on to the page.
 
     ![](images/lab04/media/image37.png)
     
     ![](images/lab04/media/image38.png)
     
-18. **Checkpoint**. Below is how our designer page looks for reference.
+20. **Checkpoint**. Below is how our designer page looks for reference.
     Yours will not show the green Completed indicator on the models just
     yet. Those appear after we’ve ran the pipeline.
 
