@@ -132,10 +132,10 @@ query those datasets.
     \<suffix> with **<inject key="Deployment ID" />**, and click the Run
     button at the top of the screen.
 
-    ```sql
-    CREATE CREDENTIAL [https://asadatalake<suffix>.dfs.core.windows.net]
-    WITH IDENTITY = 'Managed Identity';
-    ```
+     ```sql
+       CREATE CREDENTIAL [https://asadatalake<suffix>.dfs.core.windows.net]
+      WITH IDENTITY = 'Managed Identity';
+      ```
 
     The server-scoped credential you just created instructed Synapse
     Serverless SQL to use the Synapse workspace managed service identity
@@ -149,14 +149,14 @@ query those datasets.
 
 1.  To validate the Synapse MSI has the proper permissions created by the ARM template, go to the Azure portal, go to the customer-insights-workshop-rg resource group, click the Access control (IAM) tab, and confirm **asaworkspace<inject key="Deployment ID" enableCopy="false" />** has Storage Blob Data Contributor permissions.
 
-     ![](images/lab03/media/image24.png)
+      ![](images/lab03/media/image24.png)
 
 
 
 ## Step 4: Enrich the customer data
 
 1.  Right click on this
-    [CustomerCharges.csv](https://raw.githubusercontent.com/ArtisConsulting/customer-insights-azure-data-workshop/main/SampleData/CustomerCharges.csv)
+        [CustomerCharges.csv](https://raw.githubusercontent.com/ArtisConsulting/customer-insights-azure-data-workshop/main/SampleData/CustomerCharges.csv)
     link and choose “Save link as…” and name the file **CustomerCharges.csv** (not CustomerCharges.txt) on
     your workstation. We will now upload this file to Azure Data Lake
     Storage Gen2 (ADLS).
@@ -167,7 +167,7 @@ query those datasets.
     click on the default storage account (**asaworkspace<inject key="Deployment ID" enableCopy="false" />**) and click
     on the staging container.
 
-     ![](images/lab03/media/image16.png)
+       ![](images/lab03/media/image16.png)
 
 1.  Click the **+ New folder** button and create a new folder called **Charges**.
 
@@ -192,27 +192,27 @@ query those datasets.
     read from the CustomerCharges.csv file in ADLS. Notice that the header
     row is treated like a row of data.
 
-    ![](images/lab03/media/lab3-synapse1.png)
+     ![](images/lab03/media/lab3-synapse1.png)
 
 1.  To fix the header row, paste in the following query and fix \<suffix> with **<inject key="Deployment ID" />** then run the query: 
 
-    ```sql
-    SELECT
-    TOP 100 *
-    FROM OPENROWSET(
-    BULK 'https://asadatalake<suffix>.dfs.core.windows.net/staging/Charges/',
-    FORMAT = 'CSV',
-    PARSER_VERSION='2.0',
-    HEADER_ROW = TRUE
-    )
-    WITH (
-    customerID VARCHAR(20),
-    Charge decimal(20,2),
-    ChargeDate date
-    ) c
-    ```
+     ```sql
+     SELECT
+     TOP 100 *
+     FROM OPENROWSET(
+     BULK 'https://asadatalake<suffix>.dfs.core.windows.net/staging/Charges/',
+     FORMAT = 'CSV',
+     PARSER_VERSION='2.0',
+     HEADER_ROW = TRUE
+     )
+     WITH (
+     customerID VARCHAR(20),
+     Charge decimal(20,2),
+     ChargeDate date
+     ) c
+     ```
        
-    ![](images/lab03/media/image22.png)
+     ![dfgsf](images/lab03/media/image22.png)
 
 8.  Replace the “SELECT TOP 100 \*” line of the query with the following
     code which creates a CI database with the [UTF8
@@ -249,37 +249,37 @@ query those datasets.
     this query into the SQL script 1 window, make sure the “Use database”
     dropdown says “CI” still, and click Run:
 
-    ```sql
-    CREATE OR ALTER VIEW dbo.CustomerChurn
-    AS
-    SELECT c.CustomerDemographics_CustomerDemographics_customerID as customerID, 
-    c.[gender], 
-    c.[SeniorCitizen], 
-    c.[Partner], 
-    c.[Dependents], 
-    c.[tenure], 
-    c.[PhoneService], 
-    c.[MultipleLines], 
-    c.[InternetService], 
-    c.[OnlineSecurity], 
-    c.[OnlineBackup], 
-    c.[DeviceProtection], 
-    c.[TechSupport], 
-    c.[StreamingTV], 
-    c.[StreamingMovies], 
-    c.[Contract], 
-    c.[PaperlessBilling], 
-    c.[PaymentMethod], 
-    cc.[MonthlyCharges], 
-    cc.[TotalCharges], 
-    c.[Churn]
-    FROM [CustomerInsightsExport].[dbo].[Customer] c
-    LEFT JOIN (
+      ```sql
+      CREATE OR ALTER VIEW dbo.CustomerChurn
+      AS
+      SELECT c.CustomerDemographics_CustomerDemographics_customerID as customerID, 
+      c.[gender], 
+      c.[SeniorCitizen], 
+      c.[Partner], 
+      c.[Dependents], 
+      c.[tenure], 
+      c.[PhoneService], 
+      c.[MultipleLines], 
+      c.[InternetService], 
+      c.[OnlineSecurity], 
+      c.[OnlineBackup], 
+      c.[DeviceProtection], 
+      c.[TechSupport], 
+      c.[StreamingTV], 
+      c.[StreamingMovies], 
+      c.[Contract], 
+      c.[PaperlessBilling], 
+      c.[PaymentMethod], 
+      cc.[MonthlyCharges], 
+      cc.[TotalCharges], 
+      c.[Churn]
+      FROM [CustomerInsightsExport].[dbo].[Customer] c
+      LEFT JOIN (
         SELECT customerID, avg(Charge) as MonthlyCharges, sum(Charge) as TotalCharges
         FROM CI.dbo.CustomerChurnCharges cc
         GROUP BY customerID
-    ) cc on cc.customerID = c.CustomerDemographics_CustomerDemographics_customerID
-    ```
+      ) cc on cc.customerID = c.CustomerDemographics_CustomerDemographics_customerID
+      ```
 
     To explain what this query is doing, we are summarizing the charges to
     one row per customer showing average monthly charges and total charges,
