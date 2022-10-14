@@ -228,21 +228,21 @@ query those datasets.
     database” then make sure the CREATE DATABASE and USE statements below
     have been run.
 
-        ```sql
-        CREATE DATABASE CI
-        COLLATE Latin1_General_100_BIN2_UTF8;
-        GO
-        USE CI;
-        GO
-        CREATE VIEW dbo.CustomerChurnCharges
-        AS
-        SELECT *
-        <remainder of the prior query here>
-        ```
+      ```sql
+      CREATE DATABASE CI
+      COLLATE Latin1_General_100_BIN2_UTF8;
+      GO
+      USE CI;
+      GO
+      CREATE VIEW dbo.CustomerChurnCharges
+      AS
+      SELECT *
+      <remainder of the prior query here>
+      ```
     
 1. Highlight all statements and click the Run button.
     
-     ![](images/lab03/media/image23.png)
+     ![gfhg](images/lab03/media/image23.png)
        
 1.  Now let’s create a new view which joins the Customer data exported from
     Customer Insights with the CustomerChurnCharges view. Copy and paste
