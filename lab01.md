@@ -231,7 +231,11 @@ is a prerequisite for later steps and labs.
 
 ## Step 1: Map fields in your customer entities
 
-1.  On the Data… Unify left nav, click **+ Select entities and fields** on the Map tab:
+1.  On the Data… Unify left nav, click on **Get started**.
+
+    ![](images/lab01/media/unify_data.png)
+ 
+1.  Click **+ Select entities and fields** on the Map tab:
 
     ![](images/lab01/media/lab1-03.png)
 
@@ -289,7 +293,15 @@ is a prerequisite for later steps and labs.
 
 ## Step 3: Merge your customer entities
 
-1.  On the Merge tab, you have the opportunity to combine, ignore or rename
+1.  On the Unify tab, click on **Get started** under Unified customer fileds.
+    
+    ![](images/lab01/media/unify_data1.png)
+    
+1. Leave all the values in Unify to default and click **save and close**.
+
+   ![](images/lab01/media/unify_data2.png)
+    
+1.  you have the opportunity to combine, ignore or rename
     any fields. For the sample dataset, nothing needs to be done
     except click **Unify customer profiles**.
 
