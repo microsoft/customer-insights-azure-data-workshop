@@ -4,29 +4,6 @@
 
 ![](images/lab02/media/image2.png)
 
-#  
-
-Contents
-
-# 
-
-[Lab Overview](#lab-overview)
-
-[Introduction](#introduction)
-
-[Objectives](#objectives)
-
-[Exercise 1: Deploy ARM Template](#exercise-1-deploy-arm-template)
-
-- [Step 1: Deploy the ARM template](#step-2-deploy-the-arm-template)
-
-- [Step 2: Grant permissions to the team](#step-3-grant-permissions-to-the-team)
-
-- [Step 3: Cleanup Azure resources (at conclusion of workshop)](#step-4-cleanup-azure-resources-at-conclusion-of-workshop)
-
-[Summary](#summary)
-
-# 
 
 # Lab Overview
 
