@@ -4,46 +4,6 @@
 
 ![](images/lab01/media/image2.png)
  
-
-Contents
-
-# 
-
-[Lab Overview](#lab-overview)
-
-[Introduction](#introduction)
-
-[Objectives](#objectives)
-
-[Exercise 1: Import customer
-datasets](#exercise-1-import-customer-datasets)
-
-- [Step 1: Sign into Dynamics 365 Customer Insights](#step-1-sign-into-dynamics-365-customer-insights)
-
-- [Step 2: Load CustomerDemographics sample dataset to Customer Insights](#step-2-load-customerdemographics-sample-dataset-to-customer-insights)
-
-- [Step 3: Load CustomerServiceAttributes sample dataset to Customer Insights](#step-3-load-customerserviceattributes-sample-dataset-to-customer-insights)
-
-- [Step 4: Ensure entities are loaded](#step-4-ensure-entities-are-loaded)
-
-[Exercise 2: Unify customer
-entities](#exercise-2-unify-customer-entities)
-
-- [Step 1: Map fields in your customer entities](#step-1-map-fields-in-your-customer-entities)
-
-- [Step 2: Match your customer entities on customerID](#step-2-match-your-customer-entities-on-customerid)
-
-- [Step 3: Merge your customer entities](#step-3-merge-your-customer-entities)
-
-[Exercise 3: Enrich customer
-entities](#exercise-3-enrich-customer-entities)
-
-- [Step 1: Enrich with Interest affinities](#step-1-enrich-with-interest-affinities)
-
-[Summary](#summary)
-
-# 
-
 # Lab Overview
 
 ## Introduction
