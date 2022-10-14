@@ -1,8 +1,8 @@
 # Lab 3 - Customer Insights Integration with Azure Synapse Analytics
 
-![](images/lab03/media/image1.png)
+  ![](images/lab03/media/image1.png)
 
-![](images/lab03/media/image2.png)
+  ![](images/lab03/media/image2.png)
 
 # Lab Overview
 
@@ -47,11 +47,11 @@ query those datasets.
 
     On the Data… Exports left nav, click the **+Add Export** button:
 
-    ![](images/lab03/media/image3.png)
+     ![](images/lab03/media/image3.png)
 
 1.  On the **Set up export** pane click **+ Add Connection**.
 
-    ![](images/lab03/media/image4.png)
+     ![](images/lab03/media/image4.png)
 
 1.  Choose **Azure Synapse Analytics** from the dropdown. Note that the Azure
     Data Lake Store Gen 2 connection just exports files to your Azure Data
@@ -59,16 +59,16 @@ query those datasets.
     account and also creates a view called an “external table” in a Azure
     Synapse Analytics Serverless SQL Pool to query the data.
 
-    ![](images/lab03/media/image5.png)
+     ![](images/lab03/media/image5.png)
 
 1.  On the **Set up Azure Synapse Analytics connection** pane, type in a name
     for this connection, choose the Azure subscription, Synapse workspace
     (**asaworkspace<inject key="Deployment ID" enableCopy="false" />**), Storage account (**asadatalake<inject key="Deployment ID" enableCopy="false" />**), and
     Container (staging).
 
-    _Note: Your user must be an Owner on the customer-insights-workshop-rg resource group for the following to work. If you are not sure you have Owner permissions, go back to Lab 2 [Step 2: Deploy the ARM template](lab02.md#step-2-deploy-the-arm-template) and work through the #1 item to "View my access". RBAC permissions changes can take up to **15 minutes** to propogate._
+      _Note: Your user must be an Owner on the customer-insights-workshop-rg resource group for the following to work. If you are not sure you have Owner permissions, go back to Lab 2 [Step 2: Deploy the ARM template](lab02.md#step-2-deploy-the-arm-template) and work through the #1 item to "View my access". RBAC permissions changes can take up to **15 minutes** to propogate._
 
-    ![](images/lab03/media/image6.png)
+      ![sdfg](images/lab03/media/image6.png)
 
 1.  Scroll down to the bottom of the pane and check the **I agree** checkbox.
     Then click **Save**. Note, if you don’t see the Save button in blue, check
@@ -78,7 +78,7 @@ query those datasets.
     environment. Also check you have appropriate permissions in Customer
     Insights.
 
-    ![](images/lab03/media/image7.png)
+     ![](images/lab03/media/image7.png)
 
 ## Step 2: Export entities to Synapse
 
@@ -87,17 +87,17 @@ query those datasets.
     Synapse Serverless SQL database name **CustomerInsightsExport**. Select
     the Customer entity to export. Then click **Save**.
 
-    ![](images/lab03/media/image8.png)
+     ![](images/lab03/media/image8.png)
 
-    ![](images/lab03/media/image9.png)
+     ![](images/lab03/media/image9.png)
 
 1.  Then press the **Run all** button at the top of the Exports screen:
 
-    ![](images/lab03/media/image10.png)
+     ![](images/lab03/media/image10.png)
 
 1.  Wait until the screen shows it is completed successfully:
 
-    ![](images/lab03/media/image11.png)
+     ![](images/lab03/media/image11.png)
 
 ## Step 3: View data in Synapse Serverless using Synapse Studio
 
@@ -108,24 +108,24 @@ query those datasets.
     and click on the Synapse workspace (not the SQL Server) which appears
     under the Resources section.
 
-    ![](images/lab03/media/image12.png)
+     ![](images/lab03/media/image12.png)
 
 1.  On the Overview blade and the Essentials section, click the Workspace
     web URL link to open Synapse Studio.
 
     Click on the Data pane on the left. It is the
-    ![](images/lab03/media/image13.png)
+     ![](images/lab03/media/image13.png)
     icon. Expand the Databases, CustomerInsightsExport database, Tables
     folder, then right click on the Customer table and choose New SQL
     script… Select TOP 100 rows:
 
-    ![](images/lab03/media/image14.png)
+     ![](images/lab03/media/image14.png)
 
 1.  Ensure the “Connect to” dropdown has **Built-in** (meaning the Synapse
     Serverless SQL pool) selected. Then click the Run button in the SQL
     script 1 tab to view some rows in your exported Customer data.
 
-    ![](images/lab03/media/image15.png)
+     ![](images/lab03/media/image15.png)
 
 1.  Highlight the current query and press the backspace key to delete the
     query text. Paste the following query into the query window, replace
@@ -133,9 +133,9 @@ query those datasets.
     button at the top of the screen.
 
      ```sql
-       CREATE CREDENTIAL [https://asadatalake<suffix>.dfs.core.windows.net]
-      WITH IDENTITY = 'Managed Identity';
-      ```
+     CREATE CREDENTIAL [https://asadatalake<suffix>.dfs.core.windows.net]
+     WITH IDENTITY = 'Managed Identity';
+     ```
 
     The server-scoped credential you just created instructed Synapse
     Serverless SQL to use the Synapse workspace managed service identity
@@ -149,7 +149,7 @@ query those datasets.
 
 1.  To validate the Synapse MSI has the proper permissions created by the ARM template, go to the Azure portal, go to the customer-insights-workshop-rg resource group, click the Access control (IAM) tab, and confirm **asaworkspace<inject key="Deployment ID" enableCopy="false" />** has Storage Blob Data Contributor permissions.
 
-      ![](images/lab03/media/image24.png)
+     ![](images/lab03/media/image24.png)
 
 
 
@@ -162,12 +162,12 @@ query those datasets.
     Storage Gen2 (ADLS).
 
     Click on the Data pane on the left. It is the
-    ![](images/lab03/media/image13.png)
+     ![](images/lab03/media/image13.png)
     icon. Then go to the Linked tab. Expand Azure Data Lake Storage Gen2 and
     click on the default storage account (**asaworkspace<inject key="Deployment ID" enableCopy="false" />**) and click
     on the staging container.
 
-       ![](images/lab03/media/image16.png)
+     ![](images/lab03/media/image16.png)
 
 1.  Click the **+ New folder** button and create a new folder called **Charges**.
 
@@ -196,23 +196,23 @@ query those datasets.
 
 1.  To fix the header row, paste in the following query and fix \<suffix> with **<inject key="Deployment ID" />** then run the query: 
 
-       ```sql
-       SELECT
-       TOP 100 *
-       FROM OPENROWSET(
-       BULK 'https://asadatalake<suffix>.dfs.core.windows.net/staging/Charges/',
-       FORMAT = 'CSV',
-       PARSER_VERSION='2.0',
-       HEADER_ROW = TRUE
-       )
-       WITH (
-       customerID VARCHAR(20),
-       Charge decimal(20,2),
-       ChargeDate date
-       ) c
-       ```
+     ```sql
+     SELECT
+     TOP 100 *
+     FROM OPENROWSET(
+     BULK 'https://asadatalake<suffix>.dfs.core.windows.net/staging/Charges/',
+     FORMAT = 'CSV',
+     PARSER_VERSION='2.0',
+     HEADER_ROW = TRUE
+     )
+     WITH (
+     customerID VARCHAR(20),
+     Charge decimal(20,2),
+     ChargeDate date
+     ) c
+     ```
        
-       ![dfgsf](images/lab03/media/image22.png)
+     ![dfgsf](images/lab03/media/image22.png)
 
 8.  Replace the “SELECT TOP 100 \*” line of the query with the following
     code which creates a CI database with the [UTF8
@@ -228,17 +228,17 @@ query those datasets.
     database” then make sure the CREATE DATABASE and USE statements below
     have been run.
 
-      ```sql
-      CREATE DATABASE CI
-      COLLATE Latin1_General_100_BIN2_UTF8;
-      GO
-      USE CI;
-      GO
-      CREATE VIEW dbo.CustomerChurnCharges
-      AS
-      SELECT *
-      <remainder of the prior query here>
-      ```
+     ```sql
+     CREATE DATABASE CI
+     COLLATE Latin1_General_100_BIN2_UTF8;
+     GO
+     USE CI;
+     GO
+     CREATE VIEW dbo.CustomerChurnCharges
+     AS
+     SELECT *
+     <remainder of the prior query here>
+     ```
     
 1. Highlight all statements and click the Run button.
     
