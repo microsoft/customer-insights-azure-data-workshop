@@ -228,7 +228,6 @@ query those datasets.
     database” then make sure the CREATE DATABASE and USE statements below
     have been run.
 
-
     ```sql
     CREATE DATABASE CI
     COLLATE Latin1_General_100_BIN2_UTF8;
