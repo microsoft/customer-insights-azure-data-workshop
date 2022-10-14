@@ -168,6 +168,12 @@ already loaded, unified and enriched appropriately.
     **CustomerServiceAttributes** and click **Next**:
 
     ![](images/lab01/media/lab01-02.png)
+    
+1. Search for **Web** and choose **Web API** which is a quick way to import a
+    dataset from a public website. (Your actual business data could come
+    from any other type of data source which Power Query Online supports.)
+
+    ![](images/lab01/media/image5.png)
 
 1.  Choose Web API like on the previous data source and then paste in the
     following URL and accept the existing connection since this data source is from the same
