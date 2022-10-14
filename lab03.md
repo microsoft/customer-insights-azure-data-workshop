@@ -194,28 +194,25 @@ query those datasets.
 
     ![](images/lab03/media/lab3-synapse1.png)
 
-1.  To fix the header row, paste in the following query and fix \<suffix>
-    then run the query: 
+1.  To fix the header row, paste in the following query and fix \<suffix> with **<inject key="Deployment ID" />** then run the query: 
 
     ```sql
     SELECT
     TOP 100 *
-    FROM
-    OPENROWSET(
-      BULK 'https://asadatalake<suffix>.dfs.core.windows.net/staging/Charges/',
-      FORMAT = 'CSV',
-      PARSER_VERSION='2.0',
-      HEADER_ROW = TRUE
-      )
+    FROM OPENROWSET(
+    BULK 'https://asadatalake<suffix>.dfs.core.windows.net/staging/Charges/',
+    FORMAT = 'CSV',
+    PARSER_VERSION='2.0',
+    HEADER_ROW = TRUE
+    )
     WITH (
-      customerID VARCHAR(20),
-      Charge decimal(20,2),
-      ChargeDate date
-      ) c
+    customerID VARCHAR(20),
+    Charge decimal(20,2),
+    ChargeDate date
+    ) c
     ```
-
-
-  > ![](images/lab03/media/image22.png)
+       
+    ![](images/lab03/media/image22.png)
 
 8.  Replace the “SELECT TOP 100 \*” line of the query with the following
     code which creates a CI database with the [UTF8
@@ -234,18 +231,14 @@ query those datasets.
 
     ```sql
     CREATE DATABASE CI
-        COLLATE Latin1_General_100_BIN2_UTF8;
-
+    COLLATE Latin1_General_100_BIN2_UTF8;
     GO
-
     USE CI;
-
     GO
-
     CREATE VIEW dbo.CustomerChurnCharges
     AS
     SELECT *
-    <remainder of the prior query here> 
+    <remainder of the prior query here>
     ```
    
 1. Highlight all statements and click the Run button.
