@@ -4,42 +4,6 @@
 
 ![](images/lab06/media/image2.png)
 
-#  
-
-Contents
-
-# 
-
-[Lab Overview](#lab-overview)
-
-[Introduction](#introduction)
-
-[Objectives](#objectives)
-
-[Exercise 1: Orchestrate the refresh and transformation of the customer
-charges
-file](#exercise-1-orchestrate-the-refresh-and-transformation-of-the-customer-charges-file)
-
-- [Step 1: Open Synapse Studio in a web browser](#step-1-open-synapse-studio-in-a-web-browser)
-
-- [Step 2: Download the sample charge detail file](#step-2-download-the-sample-charge-detail-file)
-
-- [Step 3: Automate the data integration and transformation for customer charges](#step-3-automate-the-data-integration-and-transformation-for-customer-charges)
-
-[Exercise 2: Automate the rerun of your machine learning
-pipeline](#exercise-2-automate-the-rerun-of-your-machine-learning-pipeline)
-
-- [Step 1: Setup a Synapse pipeline which runs your machine learning pipeline](#step-1-setup-a-synapse-pipeline-which-runs-your-machine-learning-pipeline)
-
-- [Step 2: Schedule the Synapse pipeline](#step-2-schedule-the-synapse-pipeline)
-
-- [Step 3: Schedule the data source refresh in Customer Insights](#step-3-schedule-the-data-source-refresh-in-customer-insights)
-
-[Exercise 3: Cleanup Azure resources (optional)](#exercise-3-cleanup-azure-resources-optional)
-
-[Summary](#summary)
-
-# 
 
 # Lab Overview
 
