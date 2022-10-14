@@ -5,26 +5,6 @@
 ![](images/lab04/media/image2.png)
 
 
-# Contents
-
-# 
-
-[Introduction](#introduction)
-
-[Objectives](#objectives)
-
-[Step 1: Sign into Azure ML Studio and choose your workspace](#step-1-sign-into-azure-ml-studio-and-choose-your-workspace)
-
-[Step 2: Create Data Connection and Dataset](#step-2-create-data-connection-and-dataset)
-
-[Step 3: Experiment Design](#step-3-experiment-design)
-
-[Step 4: Training models](#step-4-training-models)
-
-[Step 5: Output Model](#step-5-output-model)
-
-# 
-
 # Lab Overview
 
 ## Introduction
