@@ -432,14 +432,23 @@ storage for the next labs.
 
 11. If you would like to view the data, you can select the **Edit**
     button to preview it.
+    
+12. Refer back to the **Clean Missing Data** module. In the Output
+    Settings Option, we are going to select **Regenerate Output.** This
+    will ensure that every time we execute the pipeline, we are
+    re-executing the SQL query to pull the latest data and handling the
+    missing values appropriately and not using cached results from a
+    previous execution.
 
-12. The final step is to **Publish** the pipeline. Click the **Publish**
+    ![](images/lab04/media/image56.png)
+
+13. The final step is to **Publish** the pipeline. Click the **Publish**
     button in the top right next to the Submit button. Select **Create
     New** and call it **CustomerChurnEP**. Click **Publish**.
 
     ![](images/lab04/media/image57.png)
 
-13. Click on the **Pipelines** tab to see the newly published pipeline.
+14. Click on the **Pipelines** tab to see the newly published pipeline.
 
     ![](images/lab04/media/image58.png)
 
