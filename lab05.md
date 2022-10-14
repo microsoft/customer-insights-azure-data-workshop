@@ -4,30 +4,6 @@
 
 ![](images/lab05/media/image2.png)
 
-#  
-
-Contents
-
-# 
-
-[Lab Overview](#lab-overview)
-
-[Introduction](#introduction)
-
-[Objectives](#objectives)
-
-[Exercise 1: Import Machine Learning Output to Customer
-Insights](#exercise-1-import-machine-learning-output-to-customer-insights)
-
-- [Step 1: Copy the storage account key for your Azure ML storage account](#step-1-copy-the-storage-account-key-for-your-azure-ml-storage-account)
-
-- [Step 2: Import Machine Learning Output to Customer Insights](#step-2-import-machine-learning-output-to-customer-insights)
-
-- [Step 3: Segment your customers at highest risk of churning](#step-3-segment-your-customers-at-highest-risk-of-churning)
-
-[Summary](#summary)
-
-# 
 
 # Lab Overview
 
