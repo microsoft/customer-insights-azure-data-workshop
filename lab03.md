@@ -196,21 +196,21 @@ query those datasets.
 
 1.  To fix the header row, paste in the following query and fix \<suffix> with **<inject key="Deployment ID" />** then run the query: 
 
-      ```sql
-      SELECT
-      TOP 100 *
-      FROM OPENROWSET(
-      BULK 'https://asadatalake<suffix>.dfs.core.windows.net/staging/Charges/',
-      FORMAT = 'CSV',
-      PARSER_VERSION='2.0',
-      HEADER_ROW = TRUE
-      )
-      WITH (
-      customerID VARCHAR(20),
-      Charge decimal(20,2),
-      ChargeDate date
-      ) c
-      ```
+       ```sql
+       SELECT
+       TOP 100 *
+       FROM OPENROWSET(
+       BULK 'https://asadatalake<suffix>.dfs.core.windows.net/staging/Charges/',
+       FORMAT = 'CSV',
+       PARSER_VERSION='2.0',
+       HEADER_ROW = TRUE
+       )
+       WITH (
+       customerID VARCHAR(20),
+       Charge decimal(20,2),
+       ChargeDate date
+       ) c
+       ```
        
        ![dfgsf](images/lab03/media/image22.png)
 
