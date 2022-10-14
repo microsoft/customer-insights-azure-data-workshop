@@ -4,33 +4,6 @@
 
 ![](images/lab03/media/image2.png)
 
-#  
-
-Contents
-
-# 
-
-[Lab Overview](#lab-overview)
-
-[Introduction](#introduction)
-
-[Objectives](#objectives)
-
-[Exercise 1: Export data from Customer
-Insights](#exercise-1-export-data-from-customer-insights)
-
-- [Step 1: Add a connection to Synapse](#step-1-add-a-connection-to-synapse)
-
-- [Step 2: Export entities to Synapse](#step-2-export-entities-to-synapse)
-
-- [Step 3: View data in Synapse Serverless using Synapse Studio](#step-3-view-data-in-synapse-serverless-using-synapse-studio)
-
-- [Step 4: Enrich the customer data](#step-4-enrich-the-customer-data)
-
-[Summary](#summary)
-
-# 
-
 # Lab Overview
 
 ## Introduction
