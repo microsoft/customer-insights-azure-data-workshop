@@ -212,7 +212,7 @@ query those datasets.
       ) c
       ```
        
-     ![dfgsf](images/lab03/media/image22.png)
+       ![dfgsf](images/lab03/media/image22.png)
 
 8.  Replace the “SELECT TOP 100 \*” line of the query with the following
     code which creates a CI database with the [UTF8
