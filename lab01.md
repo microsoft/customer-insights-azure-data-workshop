@@ -88,8 +88,28 @@ already loaded, unified and enriched appropriately.
 
 ## Step 1: Sign into Dynamics 365 Customer Insights
 
-Browse to <https://home.ci.ai.dynamics.com/> and sign in with your
-organizational account.
+1. Browse to <https://home.ci.ai.dynamics.com/> and sign in with the following credentials.
+
+   * Email/Username: **<inject key="AzureAdUserEmail"></inject>**
+   * Password: **<inject key="AzureAdUserPassword"></inject>**
+
+2. On the Customer Insights home page, click on **Create environment**.
+
+   ![](images/lab01/media/environment01.png)
+   
+3. On the Basic information pane, provide **Dynamics 365** as the environment name. Leave all the other values to default and click on **Next**.
+
+   ![](images/lab01/media/environment2.png)
+   
+4. Leave the default values in **Data store** and **Micrososft Dataverse** panes and click **Next**.
+   
+   ![](images/lab01/media/environment3.png)
+   
+   ![](images/lab01/media/environment4.png)
+   
+5. Review all the information in **Review** pane and click on **Create**. Wait until the environment is created.
+
+    ![](images/lab01/media/environment5.png)
 
 ## Step 2: Load CustomerDemographics sample dataset to Customer Insights
 
