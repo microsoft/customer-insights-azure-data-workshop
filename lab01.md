@@ -175,8 +175,7 @@ already loaded, unified and enriched appropriately.
 
     ![](images/lab01/media/image5.png)
 
-1.  Choose Web API like on the previous data source and then paste in the
-    following URL and accept the existing connection since this data source is from the same
+1.  Paste in the following URL and accept the existing connection since this data source is from the same
     website.
 
     <https://raw.githubusercontent.com/ArtisConsulting/customer-insights-azure-data-workshop/main/SampleData/CustomerServiceAttributes.csv>
