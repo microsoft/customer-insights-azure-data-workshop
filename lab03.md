@@ -155,7 +155,7 @@ query those datasets.
 
 ## Step 4: Enrich the customer data
 
-1.  Click on the following link and choose “Save as…” and name the file **CustomerCharges.csv** (not CustomerCharges.txt) on
+1.  Paste the following link in the browser window and choose “Save as…” and name the file **CustomerCharges.csv** (not CustomerCharges.txt) on
     your workstation. We will now upload this file to Azure Data Lake
     Storage Gen2 (ADLS).
     
