@@ -51,11 +51,13 @@ web URL link to open Synapse Studio.
 
 ## Step 2: Download the sample charge detail file
 
-1.  Right click on this
-    [CustomerChargesDetail.csv](https://raw.githubusercontent.com/ArtisConsulting/customer-insights-azure-data-workshop/main/SampleData/CustomerChargesDetail.csv)
-    link and choose **Save link as…** and name the file
+1.  Paste the following link in the browser window and choose “Save as…” and name the file
     **CustomerChargesDetail.csv** (not CustomerChargesDetail.txt) on your workstation. We will now upload this
     file to Azure Data Lake Storage Gen2 (ADLS).
+    
+    ```
+    https://raw.githubusercontent.com/ArtisConsulting/customer-insights-azure-data-workshop/main/SampleData/CustomerChargesDetail.csv
+    ```
 
 1.  Click on the Data pane on the left. It is the
     ![](images/lab06/media/image4.png)
