@@ -180,7 +180,7 @@ learning models into Customer Insights.
 1.  Scroll down to the bottom of the field list, mouse over the Scored
     Labels field and click the Rename button. Rename Scored Labels to
     **PredictedChurn**. Rename Scored Probabilities to
-    **PredictedChurnProbability**.
+    **PredictedChurnProbability**. Click on **Save and close**.
 
     ![](images/lab05/media/image31.png)
 
