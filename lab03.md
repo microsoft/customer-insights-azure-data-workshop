@@ -155,11 +155,13 @@ query those datasets.
 
 ## Step 4: Enrich the customer data
 
-1.  Right click on this
-        [CustomerCharges.csv](https://raw.githubusercontent.com/ArtisConsulting/customer-insights-azure-data-workshop/main/SampleData/CustomerCharges.csv)
-    link and choose “Save link as…” and name the file **CustomerCharges.csv** (not CustomerCharges.txt) on
+1.  Click on the following link and choose “Save as…” and name the file **CustomerCharges.csv** (not CustomerCharges.txt) on
     your workstation. We will now upload this file to Azure Data Lake
     Storage Gen2 (ADLS).
+    
+    ```
+    https://raw.githubusercontent.com/ArtisConsulting/customer-insights-azure-data-workshop/main/SampleData/CustomerCharges.csv
+    ```
 
     Click on the Data pane on the left. It is the
      ![](images/lab03/media/image13.png)
