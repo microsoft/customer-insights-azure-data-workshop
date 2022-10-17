@@ -136,9 +136,11 @@ learning models into Customer Insights.
     ![](images/lab05/media/unify2.png)
 
 1.  Click the checkmark next to the **PredictedCustomerChurn** entity and click
-    **Apply**:
+    **Apply**. On **Add to matching conditions?** prompt, click on **Add**.
 
     ![](images/lab05/media/unify3.png)
+    
+    ![](images/lab05/media/churn.png)
 
 1.  Click the PredictedCustomerChurn entity and set the primary key to
     customerID and click **Next**.
