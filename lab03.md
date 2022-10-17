@@ -194,7 +194,7 @@ query those datasets.
     read from the CustomerCharges.csv file in ADLS. Notice that the header
     row is treated like a row of data.
 
-     ![](images/lab03/media/lab3-synapse1.png)
+     ![](images/lab03/media/image21.png)
 
 1.  To fix the header row, paste in the following query and fix \<suffix> with **<inject key="Deployment ID" />** then run the query: 
 
