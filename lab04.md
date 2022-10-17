@@ -60,8 +60,7 @@ workspace you will use for creating experiments.
     
     ![](images/lab04/media/image4.png)
 
-2.  Select your **amlworkspace<inject key="Deployment ID" enableCopy="false" />** Azure ML workspace you created
-    in Lab 2 from the drop-down menu. Click the **Get started** button.
+2.  Select your **amlworkspace<inject key="Deployment ID" enableCopy="false" />** Azure ML workspace  from the drop-down menu. Click the **Get started** button.
     You will be directed to the Azure ML home screen.
 
     ![](images/lab04/media/image5.png)
@@ -85,7 +84,7 @@ data.
 
     ![](images/lab04/media/datastore2.png)
 
-3.  Enter the details of the new datastore. Provide the following details:
+3.  Enter the details of the new datastore. Provide the following details and click on **Create**.
     
     - Datastore Name: **telcochurn**
     - Datastore type: **Azure SQL Database**
@@ -113,8 +112,9 @@ data.
 
     ![](images/lab04/media/image12.png)
 
-7.  Click on **Browse** and select the **Charges** folder. Leave Skip Data Validation
-    **UNCHECKED** then click Next. This will connect to the data and
+7.  Enter the following SQL Query into the space provided:
+    **select \* from dbo.CustomerChurn**. Leave Skip Data Validation
+    **UNCHECKED** then click **Run query**. This will connect to the data and
     pop up with a data preview screen. After the preview has loaded,
     click **Next**. *Note: we could’ve also created the Datastore on
     this screen.*
