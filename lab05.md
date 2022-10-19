@@ -113,7 +113,7 @@ learning models into Customer Insights.
     the model predicts the customer will not churn (Scored Labels=No),
     return Low. If the model predicts they have a 50% or greater probability
     of churning (because if it got to this condition, Scored Labels must
-    equal Yes, and Scored Probabilities \> .5) return High. Otherwise return
+    equal Yes, and Scored Probabilities \> 0.5) return High. Otherwise return
     Medium. Then click OK and click Next.
 
     ![](images/lab05/media/image18.png)
