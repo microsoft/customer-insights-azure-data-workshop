@@ -36,12 +36,9 @@ template.
 
 ## Step 1: Deploy the ARM template
 
-1.  Go to the Access control (IAM) left nav of the resource group **customer-insights-workshop-rg**. Click the “View my access” button. Ensure
+1.  Go to the Access control (IAM) left nav of the resource group **customer-insights-workshop-rg**. Click the **View my access** button. Ensure
     that you are assigned the Owner role for this resource group (or the
-    Owner role is inherited from the subscription or management group). If
-    you are not an Owner, then ask your Azure administrator to make you an
-    Owner on this resource group. Or ask your Azure administrator to perform
-    this deployment for you. Owner permissions will also be required for some steps in Lab 3.
+    Owner role is inherited from the subscription or management group). 
 
     _Note: RBAC permissions changes can take up to **15 minutes** to propogate._
 
