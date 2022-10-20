@@ -350,10 +350,10 @@ the models and evaluate the outputs.
     ![](images/lab04/media/image44.png)
 
 6.  The pipeline run will take about 10-15 minutes on the sample data.
-    Once complete, click on the **Evaluate Model** step and then the
-    Output + Logs option. Then click the Evaluation results option.
+    Once complete, right click on the **Evaluate Model** step and then the
+    **Preview data** option. Then click the Evaluation results option.
 
-    ![](images/lab04/media/image45.png)
+    ![](images/lab04/media/evaluation.png)
 
 7.  From here, we can see the results of both models side by side to
     compare them. The **Decision Tree** was the left port and the
