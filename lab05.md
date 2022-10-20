@@ -41,7 +41,7 @@ learning models into Customer Insights.
 
     ![](images/lab05/media/asadatalake1.png)
 
-1.  Click the Copy to clipboard button on the right side of the Key textbox
+1.  Click the **Copy to clipboard** button on the right side of the Key textbox
     under the key1 section:
 
     ![](images/lab05/media/image5.png)
@@ -54,7 +54,7 @@ learning models into Customer Insights.
 
     ![](images/lab05/media/image6.png)
 
-1.  Choose Microsoft Power Query and give it the name **AzureMlResults** and click Next.
+1.  Choose **Microsoft Power Query** and give it the name **AzureMlResults** and click Next.
 
     ![](images/lab05/media/AzureMlResults.png)
 
@@ -95,7 +95,7 @@ learning models into Customer Insights.
 
     ![](images/lab05/media/image14.png)
 
-1.  The first row has now been promoted to column headers. Now click the ABC
+1.  The first row has now been promoted to column headers. Now click the **ABC**
     button on the Scored Probabilities column and choose **Decimal number** to
     convert that column to a decimal.
 
@@ -123,11 +123,11 @@ learning models into Customer Insights.
     ![](images/lab05/media/image19.png)
 
 1.  Click the radio button to the left of the AzureMlResults data source and
-    click the Refresh button at the top of the screen.
+    click the **Refresh** button at the top of the screen.
 
     ![](images/lab05/media/image20.png)
 
-1.  On the Data… Unify left nav, click the **Edit** button.
+1.  On the **Data… Unify** left nav, click the **Edit** button.
 
     ![](images/lab05/media/unify1.png)
     
@@ -173,8 +173,8 @@ learning models into Customer Insights.
 
     ![](images/lab05/media/image29.png)
 
-1.  Click the arrow next to Scored Labels, Scored Probabilities, and
-    ChurnRisk fields to include those fields in the merging. Click the **Done**
+1.  Click the arrow next to **Scored Labels**, **Scored Probabilities**, and
+    **ChurnRisk** fields to include those fields in the merging. Click the **Done**
     button.
 
     ![](images/lab05/media/image30.png)
@@ -194,8 +194,8 @@ learning models into Customer Insights.
 
     ![](images/lab05/media/unify7.png)
 
-1.  Once the run is successful, go to the Data… Entities left nav, click on
-    the Customer entity, go to the Data tab and scroll to the right. You
+1.  Once the run is successful, go to the **Data… Entities** left nav, click on
+    the **Customer** entity, go to the Data tab and scroll to the right. You
     should see that the PredictedChurn and PredictedChurnProbability are now
     included as fields in the customer entity. For clarity, customer
     0423-UDIJQ has not yet churned (Churn=No) but has a 52% probability of
@@ -222,7 +222,7 @@ learning models into Customer Insights.
 
     ![](images/lab05/media/image37.png)
 
-1.  Check the Churn, PredictedChurn and ChurnRisk fields (decimal fields are
+1.  Check the **Churn**, **PredictedChurn** and **ChurnRisk** fields (decimal fields are
     not currently supported) and click **Add**.
 
     ![](images/lab05/media/image38.png)
