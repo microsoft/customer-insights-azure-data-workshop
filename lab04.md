@@ -63,7 +63,7 @@ workspace you will use for creating experiments.
 2.  Select your **amlworkspace<inject key="Deployment ID" enableCopy="false" />** Azure ML workspace  from the drop-down menu. Click the **Get started** button.
     You will be directed to the Azure ML home screen.
 
-    ![](images/lab04/media/image5.png)
+    ![](images/lab04/media/amlworkspace.png)
     
 3.  In the top right, there is a directory and workspace selection. Ensure you are in the desired directory, subscription and workspace.
 
@@ -116,8 +116,7 @@ data.
     **select \* from dbo.CustomerChurn**. Leave Skip Data Validation
     **UNCHECKED** then click **Run query**. This will connect to the data and
     pop up with a data preview screen. After the preview has loaded,
-    click **Next**. *Note: we could’ve also created the Datastore on
-    this screen.*
+    click **Next**. 
 
      ![](images/lab04/media/image13.png)
 
@@ -153,9 +152,7 @@ designing the experiment.
     
 3.  In the Settings pane that pops up on the right, we need to specify a
     compute cluster as well as pipeline settings. If you already have a
-    compute cluster initiated, please skip down to step 8. *Note: if the
-    settings pane does not pop up automatically, select the gear icon
-    next to the Pipeline name.*
+    compute cluster initiated, please skip down to step 8. 
 
     ![](images/lab04/media/image19.png)
 
@@ -166,7 +163,7 @@ designing the experiment.
 
 5.  In the Compute Cluster screen, we are going to select the default
     options of Dedicated Priority, CPU Virtual Machine, and
-    Standard_DS3_v2. If Standard_DS3_v2 is not an option, click the
+    **Standard_DS3_v2**. If Standard_DS3_v2 is not an option, click the
     ‘Select from all options’ and locate it then. The Location should be
     defaulted to your region but you can change that if necessary. Click
     **Next** when complete.
@@ -183,8 +180,8 @@ designing the experiment.
 7.  After creation, you will be redirected back to the Setting pane of
     the pipeline, select the newly created Compute Cluster from the
     options. If you have trouble selecting the compute cluster from the
-    dropdown, wait until you receive a message saying “Compute
-    ‘CustomerChurnCC’ provisioning succeeded” then try to select it
+    dropdown, wait until you receive a message saying **Compute
+    ‘CustomerChurnCC’ provisioning succeeded** then try to select it
     again. Name the draft “**CustomerChurn**”
 
     ![](images/lab04/media/image23.png)
