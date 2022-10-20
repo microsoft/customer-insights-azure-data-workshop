@@ -76,7 +76,7 @@ web URL link to open Synapse Studio.
 
     ![](images/lab06/media/image7.png)
 
-1.  Choose the CustomerChargesDetail.csv file you previously downloaded and
+1.  Choose the **CustomerChargesDetail.csv** file you previously downloaded and
     click **Upload**.
 
     ![](images/lab06/media/image8.png)
@@ -112,7 +112,7 @@ flow is executed under the covers on highly scalable Spark compute.
     ![](images/lab06/media/image12.png)
 
 1.  With the Data flow module selected, view the General tab at the bottom
-    of the screen and rename the module:
+    of the screen and rename the module as **Refresh Customer Charges**:
 
     ![](images/lab06/media/image13.png)
 
@@ -130,12 +130,12 @@ flow is executed under the covers on highly scalable Spark compute.
 
     ![](images/lab06/media/image16.png)
 
-1.  In the “Source settings” tab at the bottom name it
-    **CustomerChargesDetail**, change to an **inline** source type, choose a
-    **DelimitedText** dataset type, and choose the
-    “**asaworkspace<inject key="Deployment ID" enableCopy="false" />-WorkspaceDefaultStorage**” linked service
-    (which was created automatically when the Synapse workspace was
-    created).
+1.  In the **Source settings** tab provide the following details: 
+
+    - **Output stream name**: Enter **CustomerChargesDetail**
+    - **Source type**: Select **inline**
+    - **Inline dataset type**: choose **DelimitedText**
+    - **Linked service**: Select **asaworkspace<inject key="Deployment ID" enableCopy="false" />-WorkspaceDefaultStorage**
 
     ![](images/lab06/media/image17.png)
 
@@ -180,7 +180,7 @@ flow is executed under the covers on highly scalable Spark compute.
 
     ![](images/lab06/media/image25.png)
 
-1.  Wait a few seconds for the schema to be loaded. Now the schema for this CustomerChargesDetail source is populated.
+1.  Wait a few seconds for the schema to be loaded. Now the schema for this **CustomerChargesDetail** source is populated.
 
     ![](images/lab06/media/image26.png)
 
@@ -329,8 +329,8 @@ second option in this lab.
 
     ![](images/lab06/media/image48.png)
 
-1.  Name the linked service “lsAzureML” (the “ls” prefix stands for Linked
-    Service), ensure the authentication is the (Synapse) Managed Identity
+1.  Name the linked service **lsAzureML** (the “ls” prefix stands for Linked
+    Service), ensure the authentication is the (Synapse) **Managed Identity**
     (which was granted RBAC Contributor role on the Azure ML workspace in
     the ARM template), then choose the right Azure subscription and the
     “amlworkspace<inject key="Deployment ID" enableCopy="false" />” Azure ML workspace.
@@ -348,12 +348,12 @@ second option in this lab.
 
     ![](images/lab06/media/image51.png)
 
-1.  Click the Debug button at the top of the
+1.  Click the **Debug** button at the top of the
     RefreshCustomerChargesAndChurnML pipeline. After 15 minutes or so the
     debug run should complete successfully. (Tip: If you don’t see the
     Output tab, click on the canvas background rather than on a module in
     the pipeline.) Mouse over the Execute Churn ML activity row and click
-    the eyeglasses icon to see more details about that execution. Click the
+    the **eyeglasses** icon to see more details about that execution. Click the
     link to see details from the Azure ML pipeline execution.
 
     ![](images/lab06/media/image52.png)
