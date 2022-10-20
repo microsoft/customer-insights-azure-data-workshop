@@ -49,7 +49,7 @@ query those datasets.
 
      ![](images/lab03/media/image3.png)
 
-1.  On the **Set up export** pane click **+ Add Connection**.
+1.  On the set up export pane click **+ Add Connection**.
 
      ![](images/lab03/media/image4.png)
 
@@ -61,31 +61,28 @@ query those datasets.
 
      ![](images/lab03/media/image5.png)
 
-1.  On the **Set up Azure Synapse Analytics connection** pane, type in a name
-    for this connection, choose the Azure subscription, Synapse workspace
-    (**asaworkspace<inject key="Deployment ID" enableCopy="false" />**), Storage account (**asadatalake<inject key="Deployment ID" enableCopy="false" />**), and
-    Container (staging).
+1.  On the **Set up Azure Synapse Analytics connection** pane, enter the following details and click on **Save**.
 
+    - **Display name**: Enter **Synapse**
+    - **Subscription**: **choose the Azure subscription**
+    - **Workspace**: Select **asaworkspace<inject key="Deployment ID" enableCopy="false" />**
+    - **Storage account**: Select **asadatalake<inject key="Deployment ID" enableCopy="false" />**
+    - **Container**: **Staging**
+    - Check **I agree** box under Data privacy and compliance.
+     
+     ![](images/lab03/media/connection.png)
+      
       _Note: Your user must be an Owner on the customer-insights-workshop-rg resource group for the following to work. If you are not sure you have Owner permissions, go back to Lab 2 [Step 2: Deploy the ARM template](lab02.md#step-2-deploy-the-arm-template) and work through the #1 item to "View my access". RBAC permissions changes can take up to **15 minutes** to propogate._
 
-      ![sdfg](images/lab03/media/image6.png)
-
-1.  Scroll down to the bottom of the pane and check the **I agree** checkbox.
-    Then click **Save**. Note, if you don’t see the Save button in blue, check
-    that you have filled in all required fields above. If you have, check
-    that you are in your Customer Insights environment rather than a
-    Microsoft-provided demo environment like the “Retail Sales” demo
-    environment. Also check you have appropriate permissions in Customer
-    Insights.
-
-     ![](images/lab03/media/image7.png)
 
 ## Step 2: Export entities to Synapse
 
-1.  On the **Set up Azure Synapse Analytics export** pane, choose the
-    connection you just setup, name your export **SynapseExport**, name your
-    Synapse Serverless SQL database name **CustomerInsightsExport**. Select
-    the Customer entity to export. Then click **Save**.
+1.  On the **Set up Azure Synapse Analytics export** pane, Select the following details and click on **Save**.
+
+    - **Connection for export**: choose the connection you just setup with the name **Synapse**.
+    - **Display name:** Enter **SynapseExport**
+    - **Database name:** Enter **CustomerInsightsExport**
+    - Select the **Customer** entity to export
 
      ![](images/lab03/media/image8.png)
 
@@ -110,10 +107,12 @@ query those datasets.
 
      ![](images/lab03/media/image12.png)
 
-1.  On the Overview blade and the Essentials section, click the Workspace
-    web URL link to open Synapse Studio.
+1.  On the **Overview** blade and the Essentials section, click the **Workspace
+    web URL** link to open Synapse Studio.
+    
+    ![](images/lab03/media/synapse.png)
 
-    Click on the Data pane on the left. It is the
+1. Click on the Data pane on the left. It is the
      ![](images/lab03/media/image13.png)
     icon. Expand the Databases, CustomerInsightsExport database, Tables
     folder, then right click on the Customer table and choose New SQL
