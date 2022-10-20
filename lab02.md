@@ -47,10 +47,12 @@ template.
 
     ![](images/lab02/media/image6.png)
 
-1.  CTRL+click (on Windows) or CMD+click (on MacOS) the **Deploy to Azure** button below which will prompt you to
-    enter several parameters before deploying Azure resources:
+1.  Copy the below URL and paste it in your browser window which will prompt you to
+    enter several parameters for deploying Azure resources:
 
-     [![Button to deploy the resource template to Azure.](https://aka.ms/deploytoazurebutton "Deploy the Contoso HA resources to Azure")](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FArtisConsulting%2Fcustomer-insights-azure-data-workshop%2Fmain%2FAzureSetup%2FArmTemplate.json)
+     ```
+     https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FArtisConsulting%2Fcustomer-insights-azure-data-workshop%2Fmain%2FAzureSetup%2FArmTemplate.json
+     ```
 
 1.  On the Custom deployment form fill in the choose the right Azure
     subscription and choose the **customer-insights-workshop-rg** resource group.
@@ -131,20 +133,19 @@ if you don’t have an appropriate group handy.
 
     ![](images/lab02/media/image10.png)
 
-1.  One at a time, grant each developer the Contributor role by choosing
-    role **Contributor** and searching for their name, selecting their name, and
-    clicking Save.
-
-    ![](images/lab02/media/image11.png)
+1. On the **Add role assignment** screen, select **Storage Blob Data
+    Contributor** from the list, then choose **Next**.
     
-1.  Repeat the process for the Storage Blob Data Contributor role. One at a
-    time, grant each developer the role by choosing Role=Storage Blob Data
-    Contributor and searching for their name, selecting their name, and
-    clicking Save. Be sure to assign yourself **Storage Blob Data
-    Contributor** role, too!
+    ![](images/lab02/media/IAM1.png)
+    
+1. On the **Add role assignment** Members tab, select the **+ Select members** link beneath the **Members** field.
 
-    ![](images/lab02/media/image12.png)
+    ![](images/lab02/media/IAM2.png)
+    
+1. Select the user **<inject key="AzureAdUserEmail"></inject>** and click on **Select**. On the role assignment blade, select **Review + assign**, then **Review + assign** once more.
 
+   ![](images/lab02/media/IAM3.png)
+    
 1.  In the search box at the top of the Azure portal,
     search for “asaworkspace” and click on the Synapse workspace (not the
     SQL Server) which appears under the Resources section.
