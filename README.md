@@ -29,7 +29,7 @@ Services (ADS).
 
 ## Solution Architecture
 
-<img src="images/workshop-playbook/media/image2.png" style="width:6.87946in;height:2.345966in" alt="A screenshot of a computer Description automatically generated with low confidence" />
+  ![](images/workshop-playbook/media/image2.png)
 
 The solution architecture for this engagement is pictured above and
 enables the following scenario:
@@ -71,9 +71,9 @@ The following labs are part of this workshop:
 
 This workshop content has been developed by [Artis Consulting](https://www.artisconsulting.com/), a Microsoft partner focused on Data Analytics, AI, IoT and Intelligent Apps.
 
-<img src="images/lab01/media/image1.png" style="width:3.9375in;height:0.63819in" />
+![](images/lab01/media/image1.png)
 <br/>
-<img src="images/lab01/media/image2.png" style="width:3.48973in;height:1.20479in" />
+![](images/lab01/media/image2.png)
 
 ## Questions
 
