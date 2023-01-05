@@ -57,17 +57,22 @@ already loaded, unified and enriched appropriately.
 
    ![](images/lab01/media/environment01.png)
    
-3. On the Basic information pane, provide **Dynamics 365** as the environment name. Leave all the other values to default and click on **Next**.
+3. On the Basic information pane, provide the following details and click on **Next**. 
 
-   ![](images/lab01/media/environment2.png)
+   - **Name**:Dynamics 365
+   - **Choose your Business**: Individual consumers (B-to-C)
+
+   ![](images/lab01/media/environment2-new.png)
    
-4. Leave the default values in **Data store** and **Micrososft Dataverse** panes and click **Next**.
+4. Leave the default values in **Data store** pane and click **Next**.
    
    ![](images/lab01/media/environment3.png)
    
-   ![](images/lab01/media/environment4.png)
+5. On the **Microsoft Dataverse** page, check the **Create a new Dataverse environment** option and click on **Next**.
    
-5. Review all the information in **Review** pane and click on **Create**. Wait until the environment is created.
+   ![](images/lab01/media/environment6.png)
+   
+6. Review all the information in **Review** pane and click on **Create**. Wait until the environment is created.
 
     ![](images/lab01/media/environment5.png)
 
