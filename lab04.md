@@ -146,7 +146,7 @@ designing the experiment.
 
     ![](images/lab04/media/designer.png)
 
-2.  Select the New Pipeline option **Easy-to-use-prebuilt modules**
+2.  Select the New Pipeline option **Create a new pipeline using classic prebuilt modules**
 
     ![](images/lab04/media/image18.png)
     
@@ -214,9 +214,9 @@ designing the experiment.
 11. Next, we know that TotalCharges has a few blank values (we could
     have tested this via using the Summarize Data asset and evaluating
     each column distribution but for the sake of this lab we’re going to
-    move on to handling them). Search for **Clean Missing Data**:
+    move on to handling them). Select **Component (1)** and search for **Clean Missing Data (2)**:
 
-     ![](images/lab04/media/imageCleanMissingDataSearch.png)
+     ![](images/lab04/media/Clean_missing.png)
    
     Drag **Clean Missing Data** onto the page
     and connect TelcoChurn to the new asset.
