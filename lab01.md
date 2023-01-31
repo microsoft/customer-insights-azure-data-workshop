@@ -85,7 +85,12 @@ already loaded, unified and enriched appropriately.
 1.  Choose “Microsoft Power Query” and enter a dataset name **CustomerDemographics** and click **Next**.
 
     ![](images/lab01/media/lab1-01.png)
+    
+     > **Note:** If you get a popup message saying **Unable to retrive an instance** as shown below, click on **Close** and proceed with the next steps.
 
+      ![](images/lab01/media/warning.png)
+   
+   
 1.  Search for **Web** and choose **Web API** which is a quick way to import a
     dataset from a public website. (Your actual business data could come
     from any other type of data source which Power Query Online supports.)
@@ -133,6 +138,10 @@ already loaded, unified and enriched appropriately.
     **CustomerServiceAttributes** and click **Next**:
 
     ![](images/lab01/media/lab01-02.png)
+    
+    > **Note:** If you get a popup message saying **Unable to retrive an instance** as shown below, click on **Close** and proceed with the next steps.
+
+      ![](images/lab01/media/warning.png)
     
 1. Search for **Web** and choose **Web API** which is a quick way to import a
     dataset from a public website. (Your actual business data could come
