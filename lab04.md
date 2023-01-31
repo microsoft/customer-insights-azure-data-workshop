@@ -332,7 +332,8 @@ the models and evaluate the outputs.
     Model** and **Score Model**. Connect the Two-Class Decision Forest
     output node to the left input node on Train Model and then the
     Select Columns in Dataset output node to the right input node on the
-    Train Model. Finally add an **Evaluate Model** to the bottom and
+    Train Model. In the properties pane of the **Train Model** module, choose the
+    **Churn** column. Finally add an **Evaluate Model** to the bottom and
     connect both Score Models to it.
 
     ![](images/lab04/media/image42.png)
