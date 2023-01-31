@@ -62,7 +62,7 @@ already loaded, unified and enriched appropriately.
    - **Name**:Dynamics 365
    - **Choose your Business**: Individual consumers (B-to-C)
 
-   ![](images/lab01/media/environment2-new.png)
+   ![](images/lab01/media/environment2-new1.png)
    
 4. Leave the default values in **Data store** pane and click **Next**.
    
