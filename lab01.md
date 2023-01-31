@@ -227,10 +227,9 @@ is a prerequisite for later steps and labs.
 
 ## Step 2: Match your customer entities on customerID
 
-1.  Choose **CustomerDemographics** to the first or primary entity. Choose
-    **CustomerServiceAttributes** to be the second entity. Click Done.
+1.  On the **Duplicate records** pane, leave all the default vaules and click on **Next**
 
-    ![](images/lab01/media/image28.png)
+    ![](images/lab01/media/duplicate.png)
 
 1.  Click the **Add Rule** button:
 
